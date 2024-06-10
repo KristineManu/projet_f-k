@@ -229,3 +229,7 @@ body {
   max-height: 665px;
  
 }
+.contenaire_tendance {
+  grid-template-columns: 100px 3fr;
+
+}
