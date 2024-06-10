@@ -15,14 +15,14 @@
 <body>
   <nav class="navbar dark-mode" role="navigation">
     <div class="navbar__logo">
-      <div>F&K</div>
+      <p>F&K</p>
     </div>
     <ul class="navbar__links">
-      <li class="navbar__link first"><a href="#">CATALOGUE</a></li>
-      <li class="navbar__link second"><a href="#section2">MON COMPTE</a></li>
-      <li class="navbar__link third"><a href="#"><img src="./img/logo-facebook.svg" alt="logo_facebook"></a></li>
-      <li class="navbar__link four"><a href="#"><img src="./img/logo-instagram.svg" alt=""></a></li>
-      <li class="navbar__link fifth"><a href="#"><img src="./img/logo-twitter.svg" alt=""></a></li>
+      <li class="navbar__link first"><a href="#">TENDANCES</a></li>
+      <li class="navbar__link second"><a href="#section2">CATALOGUE</a></li>
+      <li class="navbar__link third"><a href="#"><img src="./img/utilisateur.png" width=" 35px" heigh="35px" alt=""></a></li>
+      <li class="navbar__link four"><a href="#"><img src="./img/retirer-du-panier.png"width=" 35px" heigh="35px"  alt=""></a></li>
+      
     </ul>
     <button class="burger">
       <span class="bar"></span>
