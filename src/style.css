@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #ddd;
+    color: #333;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+a {
+    color: #06f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/**/
+.add-stage-btn {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    /* Bleu vif */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Change le curseur pour indiquer que c'est cliquable */
+    text-decoration: none;
+    /* Enlève le soulignement par défaut des liens */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le survol */
+}
+
+.add-stage-btn:hover {
+    background-color: #0b7dda;
+    /* Un bleu légèrement plus foncé au survol */
+}
+
+/**/
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #f44336;
+    /* Couleur rouge pour indiquer une action de déconnexion */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Change le curseur pour indiquer que c'est cliquable */
+    text-decoration: none;
+    /* Enlève le soulignement par défaut des liens */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le survol */
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+    /* Un rouge légèrement plus foncé au survol */
+}
+
+/**/
+
+.boutonsignup {
+    padding: 10px 20px;
+    background-color: #e3e721;
+    /* Bleu vif */
+    color: rgb(11, 0, 47);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Change le curseur pour indiquer que c'est cliquable */
+    text-decoration: none;
+    /* Enlève le soulignement par défaut des liens */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le survol */
+}
+
+.boutonsignup:hover {
+    background-color: #dfcd31;
+}
+
+.boutonlogin {
+    padding: 10px 20px;
+    background-color: #e3e721;
+    /* Bleu vif */
+    color: rgb(11, 0, 47);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Change le curseur pour indiquer que c'est cliquable */
+    text-decoration: none;
+    /* Enlève le soulignement par défaut des liens */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le survol */
+}
+
+.boutonlogin:hover {
+    background-color: #dfcd31;
+}
+
+/**/
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #f44336;
+    /* Couleur rouge pour indiquer une action de déconnexion */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Change le curseur pour indiquer que c'est cliquable */
+    text-decoration: none;
+    /* Enlève le soulignement par défaut des liens */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le survol */
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+    /* Un rouge légèrement plus foncé au survol */
+}
+
+/**/
+
+.boutonsignupx {
+    padding: 10px 20px;
+    background-color: #7e7e7e;
+    /* Bleu vif */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Change le curseur pour indiquer que c'est cliquable */
+    text-decoration: none;
+    /* Enlève le soulignement par défaut des liens */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le survol */
+}
+
+.boutonsignupx:hover {
+    background-color: #515151;
+}
+
+.boutonloginx {
+    padding: 10px 20px;
+    background-color: #7e7e7e;
+    /* Bleu vif */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Change le curseur pour indiquer que c'est cliquable */
+    text-decoration: none;
+    /* Enlève le soulignement par défaut des liens */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le survol */
+}
+
+.boutonloginx:hover {
+    background-color: #515151;
+}
+
+.maincontent {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.content {
+
+    width: 30%;
+    text-align: center;
+    background-color: #b2b2b2;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.log1 {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px
+}
+
+.log2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.orga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
