@@ -1,231 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+/* Variables */
+:root {
+  --font-size:1rem;
+}
+
+  
+
+.dark-mode {
+  --navbar-color: #FFF;
+  --navbar-bg-color: #000;  
+}
+
+/* Reset */
+* {
+  box-sizing:border-box; 
+  outline:none;
+  margin:0;
+  padding:0;
+}
+ul {
+  list-style:none;
+}
+
+/* Basic style */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    line-height: 1.6;
-    padding: 20px;
-    color: #333;
+  margin:0;
+  font: size 1rem;;
+  
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  };
+}
+.main-content {
+  padding:1rem;
+  background-image: url(images/image-accueil.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-h1 {
-    color: #444;
+/* Navbar */
+.navbar {  
+  display:flex;
+  align-items:center; 
+  justify-content:space-between;   
+  padding:10px;
+  font-size:1.1rem;
+  background-color:rgba(4, 19, 104, 0.582) ;
+  color:white;
+}
+.navbar__logo{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-weight: bold;
+ font-size: 1.5rem;
+}
+.navbar__links { 
+  display:flex;  
+  align-items: center;
+}
+.navbar__link { 
+  padding:0 10px;
+}
+.navbar__link > a { 
+  color:var(--navbar-color);
+  text-decoration:none;
+}
+.burger {
+  display:none;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+/*  Small device */
+@media screen and (max-width:767.98px) {
+  .navbar__links { 
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    width:0;
+    height:calc(100vh - 65px);  
+    position:absolute;
+    top: 0;
+    top:65px;
+    right:0;     
+    background-color: rgba(89, 167, 235, 0.295);  
+   background-size: cover;
+    backdrop-filter: blur(18px); 
+    transform: translateX(110%);
+    transition: all .5s ease-in-out;
+  }
+  .show-nav .navbar__links { 
+    
+    width:100vw;    
+    transform: translateX(0);
+  } 
+  .navbar__link {    
+    transform: translateX(101%);
+    transition: all .5s ease-in-out;
+  }
+  
+  .show-nav .navbar__link  {        
+    transform: translateX(0);    
+  }   
+  .navbar__link > a {
+    display:block;
+    padding:1rem;
+    font-size:1.6rem;
+    color:white;  
+    transition: all .4s ease-in-out;
+  }
+  .navbar__link > a:hover {
+    padding-left:2rem;
+    letter-spacing:5px;
+  }
+  
+  /* Toggle menu */
+  .burger {
+    display:block;
+    position:relative;
+    padding:0;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+  }
+  .bar {
+    display:block;    
+    width:45px;
+    height:4px;  
+    border-radius:3px;
+    background:var(--navbar-color); 
+    transition: all .5s ease-in-out;   
+  }
+  .bar::before, .bar::after {
+    content:"";
+    width:45px;
+    height:4px;
+    position:absolute; 
+    left:0;  
+    background:white; 
+    border-radius:3px;    
+    transition: all .5s ease-in-out;
+  }
+  .bar::before {
+    transform:translateY(-12px)
+  }
+  .bar::after {
+    transform:translateY(12px)
+  }
+  .show-nav .bar {
+    width:0;
+    background:transparent;    
+  }
+  .show-nav .bar::before {
+    transform:rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform:rotate(-45deg);
+  }
+  
+  /* Bonus - Animations */
+  .show-nav .first {      
+    transition: all 1s ease-out;
+  } 
+  .show-nav .second {      
+    transition: all 1.1s ease-out;
+  } 
+  .show-nav .third {      
+    transition: all 1.2s ease-out;
+  } 
+  .show-nav .four {      
+    transition: all 1.3s ease-out;
+  } 
+  .show-nav .fifth {      
+    transition: all 1.4s ease-out;
+  }
 }
 
-table,
-th,
-td {
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #ddd;
-    color: #333;
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: left;
-}
-
-a {
-    color: #06f;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/**/
-.add-stage-btn {
-    padding: 10px 20px;
-    background-color: #2196F3;
-    /* Bleu vif */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none;
-    /* Enlève le soulignement par défaut des liens */
-    transition: background-color 0.3s ease;
-    /* Transition douce pour le survol */
-}
-
-.add-stage-btn:hover {
-    background-color: #0b7dda;
-    /* Un bleu légèrement plus foncé au survol */
-}
-
-/**/
-.logout-btn {
-    padding: 10px 20px;
-    background-color: #f44336;
-    /* Couleur rouge pour indiquer une action de déconnexion */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none;
-    /* Enlève le soulignement par défaut des liens */
-    transition: background-color 0.3s ease;
-    /* Transition douce pour le survol */
-}
-
-.logout-btn:hover {
-    background-color: #d32f2f;
-    /* Un rouge légèrement plus foncé au survol */
-}
-
-/**/
-
-.boutonsignup {
-    padding: 10px 20px;
-    background-color: #e3e721;
-    /* Bleu vif */
-    color: rgb(11, 0, 47);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none;
-    /* Enlève le soulignement par défaut des liens */
-    transition: background-color 0.3s ease;
-    /* Transition douce pour le survol */
-}
-
-.boutonsignup:hover {
-    background-color: #dfcd31;
-}
-
-.boutonlogin {
-    padding: 10px 20px;
-    background-color: #e3e721;
-    /* Bleu vif */
-    color: rgb(11, 0, 47);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none;
-    /* Enlève le soulignement par défaut des liens */
-    transition: background-color 0.3s ease;
-    /* Transition douce pour le survol */
-}
-
-.boutonlogin:hover {
-    background-color: #dfcd31;
-}
-
-/**/
-.logout-btn {
-    padding: 10px 20px;
-    background-color: #f44336;
-    /* Couleur rouge pour indiquer une action de déconnexion */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none;
-    /* Enlève le soulignement par défaut des liens */
-    transition: background-color 0.3s ease;
-    /* Transition douce pour le survol */
-}
-
-.logout-btn:hover {
-    background-color: #d32f2f;
-    /* Un rouge légèrement plus foncé au survol */
-}
-
-/**/
-
-.boutonsignupx {
-    padding: 10px 20px;
-    background-color: #7e7e7e;
-    /* Bleu vif */
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none;
-    /* Enlève le soulignement par défaut des liens */
-    transition: background-color 0.3s ease;
-    /* Transition douce pour le survol */
-}
-
-.boutonsignupx:hover {
-    background-color: #515151;
-}
-
-.boutonloginx {
-    padding: 10px 20px;
-    background-color: #7e7e7e;
-    /* Bleu vif */
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Change le curseur pour indiquer que c'est cliquable */
-    text-decoration: none;
-    /* Enlève le soulignement par défaut des liens */
-    transition: background-color 0.3s ease;
-    /* Transition douce pour le survol */
-}
-
-.boutonloginx:hover {
-    background-color: #515151;
-}
-
-.maincontent {
-    display: flex;
-    justify-content: center;
+/*  Medium device - Bonus */
+@media screen and (min-width:768px) {
+  .navbar__link > a::after {
+    display:block;
+    content:"";
+    width:0;
+    height:1px;
+    background:var(--navbar-color);
+    transition:width .4s;
+  }
+  .navbar__link:hover > a::after {
+    width:100%;
+  }
+ 
 
 
-}
 
-.content {
-
-    width: 30%;
-    text-align: center;
-    background-color: #b2b2b2;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.log1 {
-    margin: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 5px
-}
-
-.log2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.orga {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contenaire{
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
