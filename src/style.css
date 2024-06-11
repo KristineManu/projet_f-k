@@ -247,3 +247,57 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
+/*les carte dens le caralogue*/
+.container_items {
+
+  display: grid;
+  grid-template-columns: 501px 501px 501px;
+  grid-template-rows: 666px 666px 666px;
+  gap: 20px;
+
+}
+
+
+.contenaire_catalogue {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-style: none;
+  position: absolute;
+  background-image: url(./img/panier_noir.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 535px;
+  left: 220px;
+
+}
+
+.btn:hover {
+  background-color: black;
+  background-image: url(./img/panier_blanc.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: ease-in-out all 0.2s;
+
+}
+
+.item {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+
+.titre {
+  font-weight: bold;
+
+}
