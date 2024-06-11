@@ -13,7 +13,6 @@
     include './element/navbar.php';
     ?>
     <div class="contenaire_catalogue">
-
         <div class="container_items">
             <div class="item item1">
                 <div class="divIMG"><img src="../img/product/echapee_sauvage_1a.jpg" width="450px" height="600px" alt=""></div>
