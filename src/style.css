@@ -226,15 +226,12 @@ body {
   .navbar__link:hover>a::after {
     width: 100%;
   }
-
 }
 
 .contenaire {
-
   margin: 0 auto;
   max-width: 1375px;
   max-height: 665px;
-
 }
 
 .contenaire_tendance {
@@ -242,7 +239,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .contenaire_photo {
@@ -250,6 +246,4 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
