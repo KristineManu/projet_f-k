@@ -29,9 +29,9 @@
   <section>
     <div class="contenaire_tendance">
       <div class="contenaire_photo">
-        <a href=""><img src="./img/tendance1.jpg" height="600px" width="450px" alt=""></a>
-        <a href=""><img src="./img/tendance2.jpg" height="600px" width="450px" alt=""></a>
-        <a href=""><img src="./img/tendance3.jpg" height="600px" width="450px" alt=""></a>
+        <a href=""><img src="./img/tendance1.jpg" height="688px" width="520px" alt=""></a>
+        <a href=""><img src="./img/tendance2.jpg" height="688px" width="520px" alt=""></a>
+        <a href=""><img src="./img/tendance3.jpg" height="688px" width="520px" alt=""></a>
       </div>
     </div>
 
