@@ -7,11 +7,10 @@
 </head>
 <body>
     <div class="carte">
-<div class="titre">
-Tee-Shirt Fantaisie "Wild Free"
-<hr>
-</div>
-
+        <div class="titre"> Tee-Shirt Fantaisie "Wild Free"<hr></div>
+        <button class="btnSection"> 
+<a href="produit.php">Ajouter</a>
+        </button>
 
 
 
