@@ -9,22 +9,10 @@
 </head>
 
 <body>
-  <nav class="navbar dark-mode" role="navigation">
-    <div class="navbar__logo">
-      <p>F&K</p>
-    </div>
-    <ul class="navbar__links">
-      <li class="navbar__link first"><a href="#">TENDANCES</a></li>
-      <li class="navbar__link second"><a href="#section2">CATALOGUE</a></li>
-      <li class="navbar__link third"><a href="#"><img src="./img/utilisateur.png" width=" 35px" heigh="35px" alt=""></a></li>
-      <li class="navbar__link four"><a href="#"><img src="./img/retirer-du-panier.png" width=" 35px" heigh="35px" alt=""></a></li>
 
-    </ul>
-    <button class="burger">
-      <span class="bar"></span>
-    </button>
-  </nav>
-
+  <?php
+  include './element/navbar.php';
+  ?>
 
   <section>
     <div class="contenaire_tendance">
@@ -35,6 +23,9 @@
       </div>
     </div>
 
+    <?php
+    include './element/footer.php';
+    ?>
 
 
   </section>

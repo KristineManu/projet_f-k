@@ -54,11 +54,16 @@ body {
 }
 
 .navbar__logo {
+
   margin-left: 40px;
   align-items: center;
   font-weight: bold;
   font-size: 1.9rem;
   color: black;
+}
+
+.navbar__logo a {
+  text-decoration: none;
 }
 
 .navbar__links {
