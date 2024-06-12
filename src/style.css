@@ -19,7 +19,7 @@
 * {
   box-sizing: border-box;
   outline: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -31,7 +31,7 @@ ul {
 body {
   margin: 0;
   font: size 1rem;
-  ;
+ 
 
 
   body {
@@ -52,7 +52,8 @@ body {
   justify-content: space-between;
   padding: 10px;
   font-size: 1.1rem;
-  background-color: rgba(240, 228, 228, 0.582);
+  background-color: rgba(243, 227, 174, 0.74);
+  position: sticky;
 }
 
 .navbar__logo {
@@ -325,3 +326,34 @@ margin-top: 100px;
 
 
 /*FOOTER*/
+p{
+  font-style: italic;
+}
+.footer_top_left{
+  width: 100%;
+  height: 400px;
+  padding-top: 50px;
+  border: #111010 solid 1px;
+  text-align: center;
+
+}
+.footer_top_right{
+  width: 100%;
+  height:400px;
+  padding-top: 50px;
+  border: #111010 solid 1px;
+  text-align: center;
+  background-color: rgba(243, 227, 174, 0.74);
+}
+.wrapper{
+  margin-top: 100px;
+  border: #111010 solid 1px;
+  display: flex;
+
+  justify-content: space-between;
+  width: 119%;
+  
+}
+footer{
+  justify-content: center;
+}
