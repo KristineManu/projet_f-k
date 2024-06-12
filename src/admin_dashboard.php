@@ -1,12 +1,12 @@
 <?php
 session_start();
-$userid = $_SESSION['userid'];
+$admin = $_SESSION['admin'];
 require_once("connect.php");
-$sql = "SELECT * FROM Recherche WHERE userid = :userid";
+$sql = "SELECT * FROM product WHERE id = :id";
 // On prépare la requêtte
 $query = $db->prepare($sql);
 
-$query->bindValue(":userid", $userid, PDO::PARAM_INT);
+$query->bindValue(":product", $admin, PDO::PARAM_INT);
 // on execute la requêtte
 $query->execute();
 // on recupère les données sous forme de tableau associatif

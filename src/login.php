@@ -12,28 +12,33 @@ require_once("connect.php");
 
 
 // Vérification si les données du formulaire ont été soumises
-if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['username']) && !empty($_POST['pass'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email']) && !empty($_POST['password'])) {
     // Récupération des données du formulaire
-    $username = $_POST['username'];
-    $pass = $_POST['pass'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     // Préparation de la requête pour récupérer l'utilisateur par son nom d'utilisateur
-    $stmt = $db->prepare("SELECT * FROM users WHERE username = :username");
-    $stmt->bindParam(':username', $username);
+    $stmt = $db->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt->bindParam(':email', $email);
     $stmt->execute();
 
     // Récupération de l'utilisateur
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    $email = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // Vérification du mot de passe
-    if ($user && password_verify($pass, $user['pass'])) {
+    if ($email && password_verify($password, $email['password'])) {
         // Si le mot de passe est correct, création de la session utilisateur
-        $_SESSION['userid'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
+        $_SESSION['admin'] = $email['admin'];
+
+
 
         // Redirection vers la page protégée ou affichage d'un message de succès
         $_SESSION["message"] = "Connexion réussie.";
-        header("Location: user_dashboard.php");
+        if ($_SESSION['admin'] === 1) {
+            header("Location: admin_dashboard.php");
+        } else {
+            header("Location: index.php");
+        }
     } else {
         // Si le mot de passe est incorrect ou l'utilisateur n'existe pas
         echo "Nom d'utilisateur ou mot de passe incorrect.";
@@ -47,24 +52,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['username']) && !empty
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Recherche de Stage et
-        d'Emploi</title>
+    <title>F&K_Login</title>
 </head>
 
-<h1>RECERCHE DE STAGE ET D'EMPLOI:</h1>
-<p class="orga">Je m'organise</p>
+<h1>Conecter vous: </h1>
 <!-- Formulaire de connexion -->
 <div class=maincontent>
     <div class="content">
         <div class="log1">
-            <a class=boutonsignupx href="inscription.php">S'inscrire</a>
-            <a class=boutonlogin href="login.php">Se connecter</a>
+            <p>Pas de compte?</p><a class=boutonsignupx href="inscription.php">S'inscrire</a>
         </div>
         <div class="log2">
             <form method="post" action="login.php">
                 <br>
-                Nom d'utilisateur: <br><input type="text" name="username" required><br>
-                Mot de passe: <br><input type="pass" name="pass" required><br><br>
+                e-mail: <br><input type="text" name="email" required><br>
+                Mot de passe: <br><input type="password" name="password" required><br><br>
                 <input type="submit" value="Se connecter">
             </form>
         </div>

@@ -11,7 +11,7 @@
 <body>
 
   <?php
-  include 'navbar.php';
+  include './element/navbar.php';
   ?>
 
   <section>

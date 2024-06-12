@@ -1,6 +1,6 @@
 <?php
 const DBHOST = "db";
-const DBNAME = "projet_f-k";
+const DBNAME = "projet_catalogue";
 const DBUSER = "test";
 const DBPASS = "test";
 $dsn = "mysql:host=" . DBHOST . ";dbname=" . DBNAME . ";charset=utf8";
