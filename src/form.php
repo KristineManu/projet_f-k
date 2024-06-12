@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Ajouter un Stage:</h1>
+    <h1>CONNECTEZ-VOUS A VOTRE COMPTE</h1>
     <form action="create.php" method="post">
         <label id="statut">Statut de la recherche:</label>
         <br>

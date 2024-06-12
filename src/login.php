@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['username']) && !empty
 <div class=maincontent>
     <div class="content">
         <div class="log1">
-            <a class=boutonsignupx href="signup.php">S'inscrire</a>
+            <a class=boutonsignupx href="inscription.php">S'inscrire</a>
             <a class=boutonlogin href="login.php">Se connecter</a>
         </div>
         <div class="log2">
