@@ -1,3 +1,10 @@
+<?php
+//On demare la session
+session_start();
+//On inclut la connexion à la base
+require_once('connect.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
