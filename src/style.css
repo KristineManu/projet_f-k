@@ -29,20 +29,9 @@ ul {
 
 /* Basic style */
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font: size 1rem;
-
-
-
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar */
@@ -328,9 +317,7 @@ body {
 
 
 /*FOOTER*/
-p {
-  font-style: italic;
-}
+
 
 .footer_top_left {
   width: 100%;
@@ -356,7 +343,7 @@ p {
   display: flex;
 
   justify-content: space-between;
-  width: 119%;
+  width: 100%;
 
 }
 
