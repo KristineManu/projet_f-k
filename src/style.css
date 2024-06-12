@@ -24,16 +24,20 @@ ul {
 
 /* Basic style */
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   font: size 1rem;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* Navbar */
 .navbar {
   display: flex;
   align-items: center;
-  
+
   padding: 10px;
   font-size: 1.1rem;
   background-color: rgba(243, 227, 174, 0.74);
@@ -312,9 +316,7 @@ body {
 
 
 /*FOOTER*/
-p {
-  font-style: italic;
-}
+
 
 .footer_top_left {
   width: 100%;
@@ -339,6 +341,7 @@ p {
   border: #111010 solid 1px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   width: 100%;
 
 }
