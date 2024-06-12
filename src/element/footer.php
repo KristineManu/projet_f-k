@@ -1,4 +1,4 @@
-<footer>
+<footer classe="footer">
     <div class="wrapper">
         <div class="footer_top_left">
             <h2>Paiement en ligne</h2>
