@@ -23,12 +23,11 @@ $Recherche = $query->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Recherche de Stage et
-        d'Emploi</title>
+    <title>Dashboard</title>
 </head>
 
 
-<h1>RECERCHE DE STAGE ET D'EMPLOI:</h1>
+<h1>DASHBOARD</h1>
 
 
 
