@@ -24,12 +24,12 @@
     </div>
 
     <?php
-    include 'footer.php';
+    include './element/footer.php';
     ?>
 
 
   </section>
-  <script src="../script.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 

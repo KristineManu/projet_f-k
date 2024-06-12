@@ -34,33 +34,28 @@ body {
  
 
 
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  
 
 
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 /* Navbar */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  
   padding: 10px;
   font-size: 1.1rem;
   background-color: rgba(243, 227, 174, 0.74);
-  position: sticky;
+  
 }
 
 .navbar__logo {
-  margin-left: 40px;
+  margin-left: 20px;
   align-items: center;
   font-weight: bold;
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: black;
 }
 
@@ -311,7 +306,7 @@ body {
   justify-content: center;
  
   margin: top 200px; 
-  gap: 60px;
+  gap: 20px;
  
 }
 .categorie a{
@@ -349,9 +344,8 @@ p{
   margin-top: 100px;
   border: #111010 solid 1px;
   display: flex;
-
   justify-content: space-between;
-  width: 119%;
+  width: 100%;
   
 }
 footer{
