@@ -15,10 +15,19 @@ require_once('connect.php');
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+
     <?php
     include './element/navbar.php';
     ?>
+  
+  <body>
+ <section classe="section_categorie">      
+<div class="container_categorie">
+<div class="categorie categorie_robe"><a href="../catalogue.php?type=robe">ROBE</a></div>
+<div class="categorie categorie_pantalone"><a href="../catalogue.php?type=pantalon">PANTALON</a></div>
+<div class="categorie categorie_jupe"><a href="../catalogue.php?type=top">TOP</a></div>
+</div>
+</saction>
     <div class="contenaire_catalogue">
         <div class="container_items">
             <div class="item item1">
