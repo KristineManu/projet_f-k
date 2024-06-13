@@ -15,6 +15,7 @@ $query = $db->prepare($sql);
 $query->execute();
 // on recupère les données sous forme de tableau associatif
 $product = $query->fetchAll(PDO::FETCH_ASSOC);
+
 // print_r($users);
 // echo "<pre>";
 // print_r($users);
@@ -51,10 +52,15 @@ if (!empty($_SESSION["message"])) {
 <table>
     <thead>
         <th>id</th>
+        <th>id_tendance</th>
+        <th>type</th>
         <th>product_name</th>
         <th>product_description</th>
         <th>product_price</th>
-        <th>product_pic</th>
+        <th>product_pic_1</th>
+        <th>product_pic_2</th>
+
+
     </thead>
     <tbody>
 
@@ -65,10 +71,14 @@ if (!empty($_SESSION["message"])) {
         ?>
             <tr>
                 <td><?= $prod["id"] ?></td>
+                <td><?= $prod["id_tendance"] ?></td>
+                <td><?= $prod["type"] ?></td>
                 <td><?= $prod["product_name"] ?></td>
                 <td><?= $prod["product_description"] ?></td>
                 <td><?= $prod["product_price"] ?></td>
-                <td><?= $prod["product_pic"] ?></td>
+                <td><?= $prod["product_pic_1"] ?></td>
+                <td><?= $prod["product_pic_2"] ?></td>
+
                 <td>
                     <a href="user.php?id=<?= $prod["id"] ?>">Consulter</a>
                     </dt>
