@@ -52,6 +52,7 @@ if (!empty($_SESSION["message"])) {
     <thead>
         <th>id</th>
         <th>product_name</th>
+        <th>product_description</th>
         <th>product_price</th>
         <th>product_pic</th>
     </thead>
@@ -65,6 +66,7 @@ if (!empty($_SESSION["message"])) {
             <tr>
                 <td><?= $prod["id"] ?></td>
                 <td><?= $prod["product_name"] ?></td>
+                <td><?= $prod["product_description"] ?></td>
                 <td><?= $prod["product_price"] ?></td>
                 <td><?= $prod["product_pic"] ?></td>
                 <td>

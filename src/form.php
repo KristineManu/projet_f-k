@@ -15,6 +15,10 @@
         <br>
         <input type="text" name="product_name" required>
         <br>
+        <label for="product_description">description du produit:</label>
+        <br>
+        <input type="text" name="product_description" required>
+        <br>
         <label for="product_price">Prix:</label>
         <br>
         <input type="text" name="product_price" required>
