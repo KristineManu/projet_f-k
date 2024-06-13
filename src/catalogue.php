@@ -16,11 +16,12 @@ require_once('connect.php');
 </head>
 
 
+<body>
     <?php
     include './element/navbar.php';
     ?>
   
-  <body>
+  
  <section classe="section_categorie">      
 <div class="container_categorie">
 <div class="categorie categorie_robe"><a href="../catalogue.php?type=robe">ROBE</a></div>

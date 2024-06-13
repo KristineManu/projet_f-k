@@ -235,7 +235,7 @@ body {
 }
 
 
-/*les carte dens le caralogue*/
+/*les carte dans le caralogue*/
 .container_items {
 
   display: grid;
@@ -345,3 +345,7 @@ body {
 .footer {
   justify-content: center;
 }
+
+
+
+

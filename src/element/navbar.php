@@ -1,6 +1,6 @@
 <nav class="navbar dark-mode" role="navigation">
     <div class="navbar__logo">
-        <a href="../index.php">
+        <a href="index.php">
             F&K
         </a>
     </div>
