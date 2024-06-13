@@ -22,13 +22,13 @@
         <a href="../catalogue.php?tendance=echapee_sauvage"><img src="../img/tendance3.jpg" height="688px" width="520px" alt=""></a>
       </div>
     </div>
-
+    </section>
     <?php
     include './element/footer.php';
     ?>
 
 
-  </section>
+  
   <script src="./script.js"></script>
 </body>
 
