@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email']) && !empty($_
         // Si le mot de passe est correct, création de la session utilisateur
         $_SESSION['admin'] = $email['admin'];
 
-
+        // $_SESSION["email"] = 
 
         // Redirection vers la page protégée ou affichage d'un message de succès
         $_SESSION["message"] = "Connexion réussie.";
