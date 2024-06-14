@@ -327,19 +327,15 @@ body {
   
   
   
-  .footer_left{
+  .footer_left,
+  .footer_right{
     height: 300px;
     width: 50%;
   border-right:  grey solid 2px;
   text-align: center;
   }
   
-  .footer_right{
-    height: 300px;
-    width:50%;
-    border-left:  gray solid 2px;
-    text-align: center;
-  }
+  
   .footer_bottom{
     display: flex;
    justify-content: center;
@@ -350,7 +346,7 @@ body {
    height: 50px;
    width: 140px;
    border: darksalmon;
-   border-radius: 12px;
+ 
   }
   .bouton a{
     text-decoration: none;
@@ -365,8 +361,22 @@ background-color: rgba(204, 135, 113, 0.596);
 .footer-elements{
   display: flex;
   justify-content: center;
-  gap: 70px;
+  gap: 10px;
 }
 
+@media screen and (max-width:1200px){
+  .footer-elements{
+    display: flex;
+    flex-wrap: nowrap;
+    line-height: 1rem;
+   font-size: 1em;
+  }
+
+}
+@media screen and (max-width:1000px){}
+
+@media screen and (max-width:768px){}
+
+@media screen and (max-width:480px){}
 
 
