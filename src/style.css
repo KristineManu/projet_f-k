@@ -238,19 +238,11 @@ body {
 
 
 /*les carte dans le caralogue*/
-.container_items {
-
-  display: grid;
-  grid-template-columns: 501px 501px 501px;
-  grid-template-rows: 666px 666px 666px;
-  gap: 20px;
-
-}
-
 
 .contenaire_catalogue {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -283,22 +275,27 @@ body {
   position: relative;
   justify-content: center;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .titre {
   font-weight: bold;
-
+margin-top: 10px;
 }
 
 /*section categorie*/
+.section_categorie{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+ 
+
+}
 .container_categorie {
   display: flex;
   text-align: center;
   justify-content: center;
-
-  margin: top 200px;
-  gap: 60px;
-
+  gap: 50px;
 }
 
 .categorie a {
@@ -309,7 +306,7 @@ body {
 }
 
 .categorie {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 

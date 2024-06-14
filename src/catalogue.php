@@ -45,21 +45,21 @@ include './element/navbar.php';
 </section>
 
 
-<div class="">
-    <div class="">
+<section class="contenaire_catalogue">
+    <div class="container_items">
         <?php
         // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
         foreach ($product as $pr) {
             // chaque utillisateur de la table $users sera identifié dans le foreach en tant que $user
         ?>
 
-            <div class="">
-                <div class=""><img src="<?= $pr["product_pic_1"] ?>" width="450px" height="600px" alt=""></div>
+            <div class="item">
+                <div> <a href="#"><img src="<?= $pr["product_pic_1"] ?>" width="450px" height="600px" alt=""></a></div>
 
-                <div class=""> <?= $pr["product_name"] ?></div>
-                <div class=""> <?= $pr["product_price"] ?></div>
+                <div class="titre"> <?= $pr["product_name"] ?></div>
+                <div> <?= $pr["product_price"] ?></div>
 
-                <button class=""><a href="produit.php"></a>
+                <button class="btn"><a href="produit.php"></a>
 
                 </button>
             </div>
@@ -69,6 +69,7 @@ include './element/navbar.php';
         }
 
 ?>
+</section>
 
 </body>
 
