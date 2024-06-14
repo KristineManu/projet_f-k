@@ -16,6 +16,17 @@ $query->execute();
 // on recupère les données sous forme de tableau associatif
 $product = $query->fetchAll(PDO::FETCH_ASSOC);
 
+$sql = "SELECT * FROM tendance";
+// On prépare la requêtte
+$query = $db->prepare($sql);
+
+// $query->bindValue(":id", $admin, PDO::PARAM_INT);
+// on execute la requêtte
+$query->execute();
+// on recupère les données sous forme de tableau associatif
+$tendance = $query->fetchAll(PDO::FETCH_ASSOC);
+
+
 // print_r($users);
 // echo "<pre>";
 // print_r($users);
@@ -49,6 +60,45 @@ if (!empty($_SESSION["message"])) {
 }
 ?>
 <br>
+<table>
+    <thead>
+        <th>id</th>
+        <th>tendance_name</th>
+    </thead>
+    <tbody>
+
+        <?php
+        // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
+        foreach ($tendance as $tend) {
+            // chaque utillisateur de la table $users sera identifié dans le foreach en tant que $user
+        ?>
+            <tr>
+                <td><?= $tend["id"] ?></td>
+                <td><?= $tend["tendance_name"] ?></td>
+
+                <td>
+                    <a href="update_tendance.php?id=<?= $tend["id"] ?>">Modifier</a>
+                </td>
+                <td>
+                    <a href="delete.php?id=<?= $tend["id"] ?>">Suprimer</a>
+
+                </td>
+            </tr>
+        <?php
+        }
+
+        ?>
+
+        <div>
+            <a href="form_tendance.php" class="add-btn">Ajouter une tendance :</a>
+
+            <br>
+            <br>
+
+        </div>
+    </tbody>
+</table>
+
 <table>
     <thead>
         <th>id</th>
@@ -96,7 +146,7 @@ if (!empty($_SESSION["message"])) {
         ?>
 
         <div>
-            <a href="form.php" class="add-btn">Ajouter un article</a>
+            <a href="form.php" class="add-btn">Ajouter un produit :</a>
 
             <br>
             <br>

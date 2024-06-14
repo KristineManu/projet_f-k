@@ -1,37 +1,35 @@
 <?php
 session_start();
-if ($_POST) {
+require_once("connect.php");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (
         isset($_POST["id"]) && !empty($_POST["id"])
+        && isset($_POST["type"]) && !empty($_POST["type"])
         && isset($_POST["product_name"]) && !empty($_POST["product_name"])
         && isset($_POST["product_description"]) && !empty($_POST["product_description"])
         && isset($_POST["product_price"]) && !empty($_POST["product_price"])
         && isset($_POST["product_pic_1"]) && !empty($_POST["product_pic_1"])
         && isset($_POST["product_pic_2"]) && !empty($_POST["product_pic_2"])
-
-        && isset($_POST["id_product"]) && !empty($_POST["id_product"])
-        && isset($_POST["tendance"]) && !empty($_POST["tendance"])
-        && isset($_POST["type"]) && !empty($_POST["type"])
-
+        && isset($_POST["id_tendance"]) && !empty($_POST["id_tendance"])
     ) {
-        require_once("connect.php");
         $id = strip_tags($_POST["id"]);
+        $id_tendance = $_POST["id_tendance"];
+        $type = strip_tags($_POST["type"]);
         $product_name = strip_tags($_POST["product_name"]);
         $product_description = strip_tags($_POST["product_description"]);
         $product_price = strip_tags($_POST["product_price"]);
         $product_pic_1 = strip_tags($_POST["product_pic_1"]);
         $product_pic_2 = strip_tags($_POST["product_pic_2"]);
 
-        $id_product = strip_tags($_POST["id_product"]);
-        $tendance = strip_tags($_POST["tendance"]);
-        $type = strip_tags($_POST["type"]);
-
-        $sql = "UPDATE product SET id = :id, product_name = :product_name, product_description = :product_description, product_price = :product_price, product_pic_1 = :product_pic_1, product_pic_2 = :product_pic_2 
+        $sql = "UPDATE product SET id_tendance = :id_tendance, type = :type, product_name = :product_name, product_description = :product_description, product_price = :product_price, product_pic_1 = :product_pic_1, product_pic_2 = :product_pic_2 
         WHERE id = :id";
 
         $query = $db->prepare($sql);
 
         $query->bindValue(":id", $id, PDO::PARAM_INT);
+        $query->bindValue(":id_tendance", $id_tendance, PDO::PARAM_INT);
+        $query->bindValue(":type", $type, PDO::PARAM_STR);
         $query->bindValue(":product_name", $product_name, PDO::PARAM_STR);
         $query->bindValue(":product_description", $product_description, PDO::PARAM_STR);
         $query->bindValue(":product_price", $product_price, PDO::PARAM_STR);
@@ -40,58 +38,29 @@ if ($_POST) {
 
         $query->execute();
 
-        $sql = "UPDATE categorie SET id_product = :id_product, tendance = :tendance, type = :type 
-        WHERE id_product = :id_product";
-
-        $query = $db->prepare($sql);
-
-        $query->bindValue(":id_product", $id_product, PDO::PARAM_INT);
-        $query->bindValue(":tendance", $tendance, PDO::PARAM_STR);
-        $query->bindValue(":type", $type, PDO::PARAM_STR);
-
-
-        $query->execute();
-
         header("Location: admin_dashboard.php");
     } else {
         echo "Remplissez TOUS les formulaires SVP !";
     }
 }
+
 if (isset($_GET["id"]) && !empty($_GET["id"])) {
-    require_once("connect.php");
-    // echo $_GET["id"];
     $id = strip_tags($_GET["id"]);
 
     $sql = "SELECT * FROM product WHERE id = :id";
 
     $query = $db->prepare($sql);
-    // on accroche la valeur id de la reqêtte a celle de la variable $id
     $query->bindValue(":id", $id, PDO::PARAM_INT);
     $query->execute();
 
     $user = $query->fetch();
 
-    $sql = "SELECT * FROM categorie WHERE id_product = :id";
-
-    $query = $db->prepare($sql);
-    // on accroche la valeur id de la reqêtte a celle de la variable $id
-    $query->bindValue(":id", $id, PDO::PARAM_INT);
-    $query->execute();
-
-    $product = $query->fetch();
-
-    // on verifie si l'utilisateur existe
     if (!$user) {
         header("Location: admin_dashboard.php");
-    } else {
-        require_once("disconnect.php");
     }
-
-    // print_r($user);
 } else {
     header("Location: admin_dashboard.php");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -107,6 +76,28 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 <body>
     <h1>Modifier <?= $user["product_name"] ?>:</h1>
     <form method="post">
+        <select name="type" id="type">
+            <option value="<?= $user["type"] ?>" required>Sélectionnez un type de produit</option>
+            <option>robe</option>
+            <option>pantalon</option>
+            <option>top</option>
+        </select>
+        <br>
+        <label for="id_tendance">Tendance:</label>
+        <br>
+        <select name="id_tendance" required>
+            <option value="">Sélectionnez une tendance</option>
+            <?php
+            $sql = "SELECT id, tendance_name FROM tendance";
+            $query = $db->query($sql);
+            $currentTendanceId = isset($user["id_tendance"]) ? $user["id_tendance"] : 0; // Mettez à 0 ou quelque chose de similaire si id_tendance n'est pas défini
+            while ($tendance = $query->fetch(PDO::FETCH_ASSOC)) {
+                $selected = ($tendance['id'] == $currentTendanceId) ? 'selected' : '';
+                echo "<option value=\"{$tendance['id']}\" $selected>{$tendance['tendance_name']}</option>";
+            }
+            ?>
+        </select>
+        <br>
         <label for="product_name">Nom du produit:</label>
         <br>
         <input type="text" name="product_name" value="<?= $user["product_name"] ?>" required>
@@ -127,17 +118,8 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
         <br>
         <input type="text" name="product_pic_2" value="<?= $user["product_pic_2"] ?>" required>
         <br>
-        <label for="tendance">tendance:</label>
-        <br>
-        <input type="text" name="tendance" value="<?= $product["tendance"] ?>" required>
-        <br>
-        <label for="type">type:</label>
-        <br>
-        <input type="text" name="type" value="<?= $product["type"] ?>" required>
-        <br>
         <br>
         <input type="hidden" name="id" value="<?= $user["id"] ?>" required>
-        <input type="hidden" name="id_product" value="<?= $product["id_product"] ?>" required>
         <br>
         <br>
         <button>Modifier</button>

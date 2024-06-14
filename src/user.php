@@ -3,7 +3,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
     require_once("connect.php");
     // echo $_GET["id"];
     $id = strip_tags($_GET["id"]);
-    $sql = "SELECT * FROM Recherche WHERE id = :id";
+    $sql = "SELECT * FROM product WHERE id = :id";
     $query = $db->prepare($sql);
     // on accroche la valeur id de la reqêtte a celle de la variable $id
     $query->bindValue(":id", $id, PDO::PARAM_INT);
@@ -27,30 +27,28 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $user["nom"] ?></title>
+    <title><?= $user["product_name"] ?></title>
 </head>
 
 <body>
-    <h1>Pour l'entreprise <?= $user["nom"] ?>:</h1>
-    <p><?= "-Votre statut de recherche est : " . $user["statut"]
+    <h1>Le Produit : <?= $user["product_name"] ?></h1>
+    <p><?= "- id_tendance : " .  $user["id_tendance"]
             . "<br><br>"
-            . "-Vous avez postulez le: " .  $user["datation"]
+            . "- type : " . $user["type"]
             . "<br><br>"
-            . "-Vous devez relancer l'entreprise le : " . $user["relance"]
+            . "- product_name : " . $user["product_name"]
             . "<br><br>"
-            . "-Votre type de postulation est : " . $user["postulation"]
+            . "- product_description : " . $user["product_description"]
             . "<br><br>"
-            . "-Votre méthode de postulation est : " . $user["methode"]
+            . "- product_price : " . $user["product_price"]
             . "<br><br>"
-            . "-L'intitulé du poste est : " . $user["poste"]
+            . "- product_pic_1 : " . $user["product_pic_1"]
             . "<br><br>"
-            . "-Le type de contrat est : " . $user["contrat"]
+            . "- product_pic_2 : " . $user["product_pic_2"]
             . "<br><br>"
-            . "-Votre email de contact est : " . $user["email"]
-            . "<br><br>"
-            . "-Vos commentaires sont : " . $user["commentaires"];
+
         ?></p>
-    <a href="user_dashboard.php">Retour</a>
+    <a href="admin_dashboard.php">Retour</a>
 </body>
 
 </html>

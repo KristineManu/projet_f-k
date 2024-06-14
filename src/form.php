@@ -11,9 +11,27 @@
 <body>
     <h1>AJOUTER UN ARTICLE: </h1>
     <form action="create.php" method="post">
-        <label for="type">type:</label>
+        <select name="type" id="type" required>
+            <option value="">Sélectionnez un type de produit</option>
+            <option>robe</option>
+            <option>pantalon</option>
+            <option>top</option>
+        </select>
         <br>
-        <input type="text" name="type" required>
+        <label for="id_tendance">Tendance:</label>
+        <br>
+        <select name="id_tendance" required>
+            <option value="">Sélectionnez une tendance</option>
+            <?php
+            require_once("connect.php");
+            // Assumez que la connexion à la base de données est déjà établie
+            $sql = "SELECT id, tendance_name FROM tendance";
+            $query = $db->query($sql);
+            while ($tendance = $query->fetch(PDO::FETCH_ASSOC)) {
+                echo "<option value=\"{$tendance['id']}\">{$tendance['tendance_name']}</option>";
+            }
+            ?>
+        </select>
         <br>
         <label for="product_name">Nom du produit:</label>
         <br>
