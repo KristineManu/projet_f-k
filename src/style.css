@@ -312,14 +312,13 @@ margin-top: 10px;
 
 /*FOOTER*/
 .contenaire-footer{
-  max-width: 100%;
-
+  max-width: 90%;
     display: flex;
+    height: auto;
     justify-content: center;
     align-items: center;
    flex-direction: row;
-   background-color: #eedbd1;
-   border-radius: 10px;
+  gap: 20px;
   }
   
   
@@ -328,52 +327,77 @@ margin-top: 10px;
   .footer_right{
     height: 300px;
     width: 50%;
-  border-right:  grey solid 2px;
   text-align: center;
+  background-color: #eedbd1;
   }
   
   
-  .footer_bottom{
-    display: flex;
-   justify-content: center;
-   margin-top: 100px;
-  }
-  .bouton{
-   background-color: #eedbd1;
-   height: 50px;
-   width: 140px;
-   border: darksalmon;
- 
-  }
-  .bouton a{
-    text-decoration: none;
-    color: black;
-  }
-  .bouton:hover{
-background-color: rgba(204, 135, 113, 0.596);
-
-   transition: ease all 0.3s;
-  }
-
 .footer-elements{
   display: flex;
   justify-content: center;
-  gap: 10px;
+  padding: 0;
+  align-items: center;
+}
+.bloc1{
+  display: flex;
+}
+.bloc{
+  display: grid;
+flex-direction: column;
+width: 100%;
+max-width: 400px;
 }
 
-@media screen and (max-width:1200px){
+  
+
+
+@media screen and (max-width:992px){
+  .contenaire-footer{
+      display: flex;
+      flex-wrap: wrap;
+}
+.footer_left,
+.footer_right{
+      width: 90%;
+
+}
+}
+@media screen and (max-width:850px){
   .footer-elements{
-    display: flex;
-    flex-wrap: nowrap;
-    line-height: 1rem;
-   font-size: 1em;
+      display: flex;
+      flex-wrap: wrap;
   }
+.footer_left,
+.footer_right{
+      height: 800px;
+      width: 70%;
+      text-align: center;
+      background-color: #eedbd1;
+      }
 
 }
-@media screen and (max-width:1000px){}
 
-@media screen and (max-width:768px){}
 
-@media screen and (max-width:480px){}
+.footer_bottom{
+  display: flex;
+ justify-content: center;
+ margin-top: 50px;
+}
+.bouton{
+ background-color: #eedbd1;
+ height: 50px;
+ width: 140px;
+ border: darksalmon;
+
+}
+.bouton a{
+  text-decoration: none;
+  color: black;
+}
+.bouton:hover{
+background-color: rgba(204, 135, 113, 0.596);
+
+ transition: ease all 0.3s;
+}
 
 
