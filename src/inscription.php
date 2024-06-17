@@ -85,8 +85,10 @@ if ($_POST) {
     <div class="form">
         <h1>Créer un compte: </h1>
 
-        <p>Vous avez déjà un compte ?</p> <a href="login.php">Se connecter</a>
-        <a href="index.php" class="back_btn"><img src="images/back.png"> Retour</a>
+        <p>Vous avez déjà un compte ?</p>
+        <button class="bouton"> <a href="login.php">Se connecter</a></button>
+
+        <button class="bouton"><a href="index.php" class="back_btn"><img src="images/back.png"> Retour</a></button>
         <form method="post">
             <label for="first_name">Prénom:</label><br>
             <input type="text" id="first_name" name="first_name" required><br>

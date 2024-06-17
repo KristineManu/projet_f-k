@@ -378,7 +378,7 @@ max-width: 400px;
 }
 
 
-.footer_bottom{
+.footer_bottom {
   display: flex;
  justify-content: center;
  margin-top: 50px;
@@ -400,4 +400,140 @@ background-color: rgba(204, 135, 113, 0.596);
  transition: ease all 0.3s;
 }
 
+.footer-elements{
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+/*admin_dashboard*/
+
+
+.admin_dashboard{
+
+background-image: linear-gradient(
+  45deg,
+  hsl(26deg 39% 86%) 0%,
+  hsl(17deg 47% 89%) 10%,
+  hsl(7deg 55% 92%) 20%,
+  hsl(355deg 65% 94%) 30%,
+  hsl(341deg 78% 96%) 40%,
+  hsl(322deg 100% 98%) 50%,
+  hsl(337deg 75% 96%) 60%,
+  hsl(348deg 67% 94%) 70%,
+  hsl(359deg 60% 92%) 80%,
+  hsl(8deg 56% 88%) 90%,
+  hsl(15deg 51% 85%) 100%
+);
+background-size: cover;
+
+}
+
+.article_dashboard{
+  text-align: center;
+}
+.dashboard-btn{
+  display: flex;
+ justify-content: center;
+ margin-top: 20px;
+ margin-bottom: 0;
+}
+.dashboard-btn{
+ background-color: #eedbd1;
+ height: 50px;
+ width: 140px;
+ border: darksalmon;
+ text-align: center;
+ align-items: center;
+}
+.dashboard-btn a{
+  text-decoration: none;
+  color: black;
+}
+.dashboard-btn:hover{
+background-color: rgba(204, 135, 113, 0.596);
+
+ transition: ease all 0.3s;
+}
+
+
+
+
+/*TABLEAU*/
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+ border-collapse: separate;
+  border: 3px solid purple;
+}
+.tb1{
+  width: 70%; 
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+td,th{
+  border: 1px solid black;
+}
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+.tb1 thead th:nth-child(1) {
+  width: 40px;
+}
+.tb1 thead th:nth-child(3) {
+  width: 100px;
+}
+.tb1 thead th:nth-child(4) {
+  width: 100px;
+}
+.tb2 thead th:nth-child(1) {
+  width: 40px;
+}
+.tb2 thead th:nth-child(2) {
+  width: 120px;
+}
+.tb2 thead th:nth-child(3) {
+  width: 70px;
+}
+.tb2 thead th:nth-child(9) {
+  width: 70px;
+}
+.tb2 thead th:nth-child(10) {
+  width: 80px;
+}
+
+.tb2 thead th:nth-child(11) {
+  width: 120px;
+}
+
+.tb2 thead th:nth-child(6) {
+  width: 140px;
+}
+.tb2 thead th:nth-child(4) {
+  width: 150px;
+}
+
+
+
+
+/*Inscription*/
+
+
+.form{
+  
+  background-size: cover;
+ 
+}
 

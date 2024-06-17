@@ -43,121 +43,129 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
     <title>Dashboard</title>
 </head>
 
-<?php
-include './element/navbar.php';
-?>
-
-<h1>DASHBOARD</h1>
-
-
-
-<a href="logout.php" class="logout-btn">Déconnexion</a>
-<br>
-<?php
-if (!empty($_SESSION["message"])) {
-    echo "<p>" . $_SESSION["message"] . "</p>";
-    $_SESSION["message"] = "";
-}
-?>
-<br>
-<table>
-    <thead>
-        <th>id</th>
-        <th>tendance_name</th>
-    </thead>
-    <tbody>
-
+<body>
+    <section class="admin_dashboard">
         <?php
-        // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
-        foreach ($tendance as $tend) {
-            // chaque utillisateur de la table $users sera identifié dans le foreach en tant que $user
+        include './element/navbar.php';
         ?>
-            <tr>
-                <td><?= $tend["id"] ?></td>
-                <td><?= $tend["tendance_name"] ?></td>
 
-                <td>
-                    <a href="update_tendance.php?id=<?= $tend["id"] ?>">Modifier</a>
-                </td>
-                <td>
-                    <a href="delete.php?id=<?= $tend["id"] ?>">Suprimer</a>
+        <h1 class="article_dashboard">DASHBOARD</h1>
 
-                </td>
-            </tr>
+
+
+
+        <button class="dashboard-btn"><a href="logout.php">Déconnexion</a></button>
+        <br>
         <?php
+        if (!empty($_SESSION["message"])) {
+            echo "<p>" . $_SESSION["message"] . "</p>";
+            $_SESSION["message"] = "";
         }
-
         ?>
+        <br>
+        <table class="tb1">
+            <thead>
+                <th>id</th>
+                <th>tendance_name</th>
+                <th>Modifier</th>
+                <th>
+                    <Select:d></Select:d>Supprimer
+                </th>
+            </thead>
+            <tbody>
 
-        <div>
-            <a href="form_tendance.php" class="add-btn">Ajouter une tendance :</a>
+                <?php
+                // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
+                foreach ($tendance as $tend) {
+                    // chaque utillisateur de la table $users sera identifié dans le foreach en tant que $user
+                ?>
+                    <tr>
+                        <td><?= $tend["id"] ?></td>
+                        <td><?= $tend["tendance_name"] ?></td>
 
-            <br>
-            <br>
+                        <td>
+                            <a href="update_tendance.php?id=<?= $tend["id"] ?>"><img src="img/icon/pen.png" height="25px" alt="modifier"></a>
+                        </td>
+                        <td>
+                            <a href="delete.php?id=<?= $tend["id"] ?>"><img src="img/icon/trash.png" height="25px" alt="Supprimer"></a>
 
-        </div>
-    </tbody>
-</table>
+                        </td>
 
-<table>
-    <thead>
-        <th>id</th>
-        <th>id_tendance</th>
-        <th>type</th>
-        <th>product_name</th>
-        <th>product_description</th>
-        <th>product_price</th>
-        <th>product_pic_1</th>
-        <th>product_pic_2</th>
+                    </tr>
+                <?php
+                }
+
+                ?>
+
+                <div>
+                    <button class="dashboard-btn"><a href="form_tendance.php">Ajouter une tendance</a></button>
+
+                    <br>
+                    <br>
+
+                </div>
+            </tbody>
+        </table>
+
+        <table class="tb2">
+            <thead>
+                <th>id</th>
+                <th>id_tendance</th>
+                <th>type</th>
+                <th>product_name</th>
+                <th>product_description</th>
+                <th>product_price</th>
+                <th>product_pic_1</th>
+                <th>product_pic_2</th>
+                <th>Voir</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
 
 
-    </thead>
-    <tbody>
+            </thead>
+            <tbody>
 
-        <?php
-        // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
-        foreach ($product as $prod) {
-            // chaque utillisateur de la table $users sera identifié dans le foreach en tant que $user
-        ?>
-            <tr>
-                <td><?= $prod["id"] ?></td>
-                <td><?= $prod["id_tendance"] ?></td>
-                <td><?= $prod["type"] ?></td>
-                <td><?= $prod["product_name"] ?></td>
-                <td><?= $prod["product_description"] ?></td>
-                <td><?= $prod["product_price"] ?></td>
-                <td><?= $prod["product_pic_1"] ?></td>
-                <td><?= $prod["product_pic_2"] ?></td>
+                <?php
+                // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
+                foreach ($product as $prod) {
+                    // chaque utillisateur de la table $users sera identifié dans le foreach en tant que $user
+                ?>
+                    <tr>
+                        <td><?= $prod["id"] ?></td>
+                        <td><?= $prod["id_tendance"] ?></td>
+                        <td><?= $prod["type"] ?></td>
+                        <td><?= $prod["product_name"] ?></td>
+                        <td><?= $prod["product_description"] ?></td>
+                        <td><?= $prod["product_price"] ?></td>
+                        <td><?= $prod["product_pic_1"] ?></td>
+                        <td><?= $prod["product_pic_2"] ?></td>
 
-                <td>
-                    <a href="user.php?id=<?= $prod["id"] ?>">Consulter</a>
-                    </dt>
-                <td>
-                    <a href="update.php?id=<?= $prod["id"] ?>">Modifier</a>
-                </td>
-                <td>
-                    <a href="delete.php?id=<?= $prod["id"] ?>">Suprimer</a>
+                        <td>
+                            <a href="user.php?id=<?= $prod["id"] ?>"><img src="img/icon/pngegg.png" height="25px" alt=""></a>
+                            </dt>
+                        <td>
+                            <a href="update.php?id=<?= $prod["id"] ?>"><img src="img/icon/pen.png" height="25px" alt=""></a>
+                        </td>
+                        <td>
+                            <a href="delete.php?id=<?= $prod["id"] ?>"><img src="img/icon/trash.png" height="25px" alt=""></a>
 
-                </td>
-            </tr>
-        <?php
-        }
+                        </td>
+                    </tr>
+                <?php
+                }
 
-        ?>
+                ?>
 
-        <div>
-            <a href="form.php" class="add-btn">Ajouter un produit :</a>
+                <div>
 
-            <br>
-            <br>
+                    <button class="dashboard-btn"><a href="form.php">Ajouter un produit</a></button>
+                    <br>
+                    <br>
 
-        </div>
-    </tbody>
-</table>
-<?php
-include './element/footer.php';
-?>
-
+                </div>
+            </tbody>
+        </table>
+    </section>
 </body>
 
 </html>
