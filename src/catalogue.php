@@ -2,10 +2,6 @@
 session_start();
 require_once("connect.php");
 
-if ($_SESSION['admin'] !== 1) {
-    header("Location: index.php");
-}
-
 $sql = "SELECT * FROM product";
 // On prépare la requêtte
 $query = $db->prepare($sql);
