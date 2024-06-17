@@ -42,16 +42,18 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="style.css">
     <title>Dashboard</title>
 </head>
-
+<body>
+    <section class="admin_dashboard">
 <?php
 include './element/navbar.php';
 ?>
 
-<h1>DASHBOARD</h1>
+<h1 class="article_dashboard">DASHBOARD</h1>
 
 
 
-<a href="logout.php" class="logout-btn">Déconnexion</a>
+
+<button class="dashboard-btn"><a href="logout.php">Déconnexion</a></button>
 <br>
 <?php
 if (!empty($_SESSION["message"])) {
@@ -59,13 +61,15 @@ if (!empty($_SESSION["message"])) {
     $_SESSION["message"] = "";
 }
 ?>
-<br>
-<table>
-    <thead>
-        <th>id</th>
-        <th>tendance_name</th>
-    </thead>
-    <tbody>
+    <br>
+    <table class="tb1">
+        <thead>
+            <th>id</th>
+            <th>tendance_name</th>
+            <th>Modifier</th>
+            <th><Select:d></Select:d>Supprimer</th>
+        </thead>
+        <tbody>
 
         <?php
         // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
@@ -77,30 +81,31 @@ if (!empty($_SESSION["message"])) {
                 <td><?= $tend["tendance_name"] ?></td>
 
                 <td>
-                    <a href="update_tendance.php?id=<?= $tend["id"] ?>">Modifier</a>
+                    <a href="update_tendance.php?id=<?= $tend["id"] ?>"><img src="img/icon/pen.png" height="25px" alt="modifier"></a>
                 </td>
                 <td>
-                    <a href="delete.php?id=<?= $tend["id"] ?>">Suprimer</a>
+                    <a href="delete.php?id=<?= $tend["id"] ?>"><img src="img/icon/trash.png" height="25px" alt="Supprimer"></a>
 
                 </td>
+                
             </tr>
         <?php
         }
 
         ?>
 
-        <div>
-            <a href="form_tendance.php" class="add-btn">Ajouter une tendance :</a>
+            <div>
+            <button class="dashboard-btn"><a href="form_tendance.php">Ajouter une tendance</a></button>
+                
+                <br>
+                <br>
 
-            <br>
-            <br>
+            </div>
+        </tbody>
+    </table>
 
-        </div>
-    </tbody>
-</table>
-
-<table>
-    <thead>
+    <table class="tb2">
+     <thead>
         <th>id</th>
         <th>id_tendance</th>
         <th>type</th>
@@ -109,9 +114,12 @@ if (!empty($_SESSION["message"])) {
         <th>product_price</th>
         <th>product_pic_1</th>
         <th>product_pic_2</th>
+        <th>Voir</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
 
 
-    </thead>
+        </thead>
     <tbody>
 
         <?php
@@ -130,13 +138,13 @@ if (!empty($_SESSION["message"])) {
                 <td><?= $prod["product_pic_2"] ?></td>
 
                 <td>
-                    <a href="user.php?id=<?= $prod["id"] ?>">Consulter</a>
+                    <a href="user.php?id=<?= $prod["id"] ?>"><img src="img/icon/pngegg.png" height="25px"alt=""></a>
                     </dt>
                 <td>
-                    <a href="update.php?id=<?= $prod["id"] ?>">Modifier</a>
+                    <a href="update.php?id=<?= $prod["id"] ?>"><img src="img/icon/pen.png" height="25px"alt=""></a>
                 </td>
                 <td>
-                    <a href="delete.php?id=<?= $prod["id"] ?>">Suprimer</a>
+                    <a href="delete.php?id=<?= $prod["id"] ?>"><img src="img/icon/trash.png" height="25px"alt=""></a>
 
                 </td>
             </tr>
@@ -146,14 +154,15 @@ if (!empty($_SESSION["message"])) {
         ?>
 
         <div>
-            <a href="form.php" class="add-btn">Ajouter un produit :</a>
-
+            
+            <button class="dashboard-btn"><a href="form.php">Ajouter un produit</a></button>
             <br>
             <br>
 
         </div>
     </tbody>
-</table>
+    </table>
+    </section>
 </body>
 
 </html>

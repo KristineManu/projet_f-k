@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <div class="footer_bottom">
+    <div class="footer_bottom ">
         <button class="bouton"><a href="">Retour en haut</a></button>
     </div>
     
