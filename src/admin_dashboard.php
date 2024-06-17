@@ -154,6 +154,10 @@ if (!empty($_SESSION["message"])) {
         </div>
     </tbody>
 </table>
+<?php
+include './element/footer.php';
+?>
+
 </body>
 
 </html>

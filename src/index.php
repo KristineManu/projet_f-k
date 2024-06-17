@@ -29,13 +29,13 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <a href="catalogue.php?tendance=jungle_paradise"><img class="d-block w-100" src="./img/section-1_1.png" alt="First slide"></a>
+            <a href="catalogue_tendance_jungle_paradise.php?tendance=jungle_paradise"><img class="d-block w-100" src="./img/section-1_1.png" alt="First slide"></a>
           </div>
           <div class="carousel-item">
-            <a href="catalogue.php?tendance=terres_devasion"><img class="d-block w-100" src="./img/section-1_2.png" alt="Second slide"></a>
+            <a href="catalogue_tendance_terres_devasion.php?tendance=terres_devasion"><img class="d-block w-100" src="./img/section-1_2.png" alt="Second slide"></a>
           </div>
           <div class="carousel-item">
-            <a href="catalogue.php?tendance=echapee_sauvage"><img class="d-block w-100" src="./img/section-1_3.png" alt="Third slide"></a>
+            <a href="catalogue_tendance_echapee_sauvage.php?tendance=echapee_sauvage"><img class="d-block w-100" src="./img/section-1_3.png" alt="Third slide"></a>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

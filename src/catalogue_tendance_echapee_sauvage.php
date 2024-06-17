@@ -2,7 +2,7 @@
 session_start();
 require_once("connect.php");
 
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM product WHERE id_tendance ='1'";
 // On prépare la requêtte
 $query = $db->prepare($sql);
 
@@ -32,13 +32,6 @@ $product = $query->fetchAll(PDO::FETCH_ASSOC);
 include './element/navbar.php';
 ?>
 
-<section class="section_categorie">
-    <div class="container_categorie">
-        <div class="categorie categorie_robe"><a href="../catalogue_robe.php?type=robe">ROBE</a></div>
-        <div class="categorie categorie_pantalone"><a href="../catalogue_pantalon.php?type=pantalon">PANTALON</a></div>
-        <div class="categorie categorie_jupe"><a href="../catalogue_top.php?type=top">TOP</a></div>
-    </div>
-</section>
 
 
 <section class="contenaire_catalogue">
@@ -50,7 +43,7 @@ include './element/navbar.php';
         ?>
 
             <div class="item">
-                <div> <a href="product.php?id=<?= $pr["id"] ?>"><img src=" <?= $pr["product_pic_1"] ?>" width="450px" height="600px" alt=""></a></div>
+                <div> <a href="product.php?id=<?= $pr["id"] ?>"><img src="<?= $pr["product_pic_1"] ?>" width="450px" height="600px" alt=""></a></div>
 
                 <div class="titre"> <?= $pr["product_name"] ?></div>
                 <div> <?= $pr["product_price"] ?></div>

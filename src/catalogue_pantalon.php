@@ -2,7 +2,7 @@
 session_start();
 require_once("connect.php");
 
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM product WHERE type ='pantalon'";
 // On prépare la requêtte
 $query = $db->prepare($sql);
 
@@ -50,7 +50,7 @@ include './element/navbar.php';
         ?>
 
             <div class="item">
-                <div> <a href="product.php?id=<?= $pr["id"] ?>"><img src=" <?= $pr["product_pic_1"] ?>" width="450px" height="600px" alt=""></a></div>
+                <div> <a href="product.php?id=<?= $pr["id"] ?>"><img src="<?= $pr["product_pic_1"] ?>" width="450px" height="600px" alt=""></a></div>
 
                 <div class="titre"> <?= $pr["product_name"] ?></div>
                 <div> <?= $pr["product_price"] ?></div>
