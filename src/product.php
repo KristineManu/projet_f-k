@@ -60,13 +60,7 @@ include './element/navbar.php';
                    
                 </div>
             </article>
-            <div class="info">
-                <div class="reseau_sociaux">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
-            </div>
+            
     </section>
 </body>
 

@@ -543,20 +543,22 @@ tfoot th {
 
 .product{
   display: flex;
+  
 margin: 30px 30px;
 gap: 20px;
 }
  .product_description{
   width: 500px;
-  height: 500px;
+  height: 666px;
  }
  .product_description{
   text-align: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content:center ;
   display: flex;
+  gap: 30px;
   flex-direction: column;
-  
+  border: rgba(128, 128, 128, 0.247) 1px solid;
  }
  .price{
   font-weight: 600;
@@ -565,10 +567,27 @@ gap: 20px;
  .description{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
+text-align: justify;
+ padding: 20px;
  }
  .bouton_long{
-  width: 500px;
+  width: 400px;
   font-size: 18px;
  }
  
- 
+  
+
+@media screen and (max-width:1400px){
+  .product{
+    display: flex;
+    flex-wrap: wrap;
+
+} 
+}
+.product_info{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+ }

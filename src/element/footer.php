@@ -1,4 +1,12 @@
 <footer >
+<article class="product_info">
+           <h2>Restez informé(e) des nouveautés</h2>
+                <div class="reseau_sociaux">
+                    <img src="img/icon/icons8-f.svg" alt="">
+                    <img src="img/icon/icons8-twitterx (2).svg"  alt="">
+                    <img src="img/icon/icons8-instagram (1).svg" alt="">
+                </div>
+                </article>
 <div class="contenaire-footer">
         <div class="footer_left">
             <div class="footer-title">
@@ -58,7 +66,7 @@
     </div>
 
     <div class="footer_bottom ">
-        <button class="bouton"><a href="">Retour en haut</a></button>
+        <a href=""><img src="img/icon/icons8-flèche-haut-50.png" alt=""></a>
     </div>
     
 </footer>
