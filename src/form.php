@@ -20,7 +20,7 @@
         <br>
         <label for="id_tendance">Tendance:</label>
         <br>
-        <select name="id_tendance">
+        <select name="id_tendance" required>
             <option value="">Sélectionnez une tendance</option>
             <?php
             require_once("connect.php");
