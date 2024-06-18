@@ -53,9 +53,9 @@
     <section>
       <div class="contenaire_tendance">
         <div class="contenaire_photo">
-          <a href="../catalogue_tendance.php?id_tendance=2"><img src="../img/tendance1.jpg" height="688px" width="520px" alt=""></a>
-          <a href="../catalogue_tendance.php?id_tendance=3"><img src="../img/tendance2.jpg" height="688px" width="520px" alt=""></a>
-          <a href="../catalogue_tendance.php?id_tendance=1"><img src="../img/tendance3.jpg" height="688px" width="520px" alt=""></a>
+          <a href="../catalogue_type.php?type=robe"><img src="../img/index_robe.jpg" height="688px" width="520px" alt=""></a>
+          <a href="../catalogue_type.php?type=top"><img src="../img/index_top.jpg" height="688px" width="520px" alt=""></a>
+          <a href="../catalogue_type.php?type=pantalon"><img src="../img/index_pantalon.jpg" height="688px" width="520px" alt=""></a>
         </div>
       </div>
     </section>
