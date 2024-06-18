@@ -43,18 +43,30 @@ include './element/navbar.php';
 
 <body>
     <section>
-        <article>
-            <div>
-                <img src="<?= $product["product_pic_1"] ?>" width="557px" height="740px" alt="">
-                <img src="<?= $product["product_pic_2"] ?>" width="557px" height="740px" alt="">
+            <article class="product">
+                <div class="pic1">
+        
+                    <img  src="<?= $product["product_pic_1"] ?>" width="502px" height="666px" alt="">
+                </div>
+                <div class="pic2">
+                    <img src="<?= $product["product_pic_2"] ?>" width="502px" height="666px" alt="">
+                </div>
+                <div class="product_description">
+                    <h2><?= $product["product_name"] ?></h2>
+                    <p class="price"><?= $product["product_price"] ?></p>
+                    <button class="bouton bouton_long">Ajouter aux panier</button>
+                    <p class="description"><?= $product["product_description"] ?></p>
+              
+                   
+                </div>
+            </article>
+            <div class="info">
+                <div class="reseau_sociaux">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
             </div>
-            <div>
-                <h2><?= $product["product_name"] ?></h2>
-                <p><?= $product["product_price"] ?></p>
-                <p><?= $product["product_description"] ?></p>
-                <button>Ajouter aux panier</button>
-            </div>
-        </article>
     </section>
 </body>
 

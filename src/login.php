@@ -54,6 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email']) && !empty($_
     <link rel="stylesheet" href="style.css">
     <title>F&K_Login</title>
 </head>
+<body>
+    
 
 <h1>Conecter vous: </h1>
 <!-- Formulaire de connexion -->
@@ -74,3 +76,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email']) && !empty($_
         <a href="index.php">Retour</a>
     </div>
 </div>
+</body>
