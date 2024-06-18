@@ -38,6 +38,17 @@ include './element/navbar.php';
         <div class="categorie categorie_pantalone"><a href="../catalogue_type.php?type=pantalon">PANTALON</a></div>
         <div class="categorie categorie_jupe"><a href="../catalogue_type.php?type=top">TOP</a></div>
     </div>
+
+    
+
+
+
+
+
+
+
+
+
 </section>
 
 
