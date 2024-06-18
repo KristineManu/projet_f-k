@@ -17,9 +17,9 @@
   <section>
     <div class="contenaire_tendance">
       <div class="contenaire_photo">
-        <a href="../catalogue_tendance_jungle_paradise.php?tendance=jungle_paradise"><img src="../img/tendance1.jpg" height="688px" width="520px" alt=""></a>
-        <a href="../catalogue_tendance_terres_devasion.php?tendance=terres_devasion"><img src="../img/tendance2.jpg" height="688px" width="520px" alt=""></a>
-        <a href="../catalogue_tendance_echapee_sauvage.php?tendance=echapee_sauvage"><img src="../img/tendance3.jpg" height="688px" width="520px" alt=""></a>
+        <a href="../catalogue_tendance.php?id_tendance=2"><img src="../img/tendance1.jpg" height="688px" width="520px" alt=""></a>
+        <a href="../catalogue_tendance.php?id_tendance=3"><img src="../img/tendance2.jpg" height="688px" width="520px" alt=""></a>
+        <a href="../catalogue_tendance.php?id_tendance=1"><img src="../img/tendance3.jpg" height="688px" width="520px" alt=""></a>
       </div>
     </div>
   </section>

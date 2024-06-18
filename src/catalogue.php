@@ -34,9 +34,9 @@ include './element/navbar.php';
 
 <section class="section_categorie">
     <div class="container_categorie">
-        <div class="categorie categorie_robe"><a href="../catalogue_robe.php?type=robe">ROBE</a></div>
-        <div class="categorie categorie_pantalone"><a href="../catalogue_pantalon.php?type=pantalon">PANTALON</a></div>
-        <div class="categorie categorie_jupe"><a href="../catalogue_top.php?type=top">TOP</a></div>
+        <div class="categorie categorie_robe"><a href="../catalogue_type.php?type=robe">ROBE</a></div>
+        <div class="categorie categorie_pantalone"><a href="../catalogue_type.php?type=pantalon">PANTALON</a></div>
+        <div class="categorie categorie_jupe"><a href="../catalogue_type.php?type=top">TOP</a></div>
     </div>
 </section>
 

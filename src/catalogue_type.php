@@ -2,22 +2,30 @@
 session_start();
 require_once("connect.php");
 
-$sql = "SELECT * FROM product WHERE type ='pantalon'";
-// On prépare la requêtte
+if (!isset($_GET["type"]) || empty($_GET["type"])) {
+    header("Location: index.php");
+    exit;
+}
+
+$sql = "SELECT * FROM product WHERE type = :type";
+$type = $_GET["type"];
 $query = $db->prepare($sql);
 
-// $query->bindValue(":id", $admin, PDO::PARAM_INT);
-// on execute la requêtte
+$query->bindValue("type", $type, PDO::PARAM_STR);
+
 $query->execute();
-// on recupère les données sous forme de tableau associatif
+
 $product = $query->fetchAll(PDO::FETCH_ASSOC);
 
-// print_r($users);
-// echo "<pre>";
-// print_r($users);
-// echo "</pre>";
+if (!$product) {
+
+    http_response_code(404);
+    echo "Article inexistant";
+    exit;
+}
 
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -34,12 +42,11 @@ include './element/navbar.php';
 
 <section class="section_categorie">
     <div class="container_categorie">
-        <div class="categorie categorie_robe"><a href="../catalogue_robe.php?type=robe">ROBE</a></div>
-        <div class="categorie categorie_pantalone"><a href="../catalogue_pantalon.php?type=pantalon">PANTALON</a></div>
-        <div class="categorie categorie_jupe"><a href="../catalogue_top.php?type=top">TOP</a></div>
+        <div class="categorie categorie_robe"><a href="../catalogue_type.php?type=robe">ROBE</a></div>
+        <div class="categorie categorie_pantalone"><a href="../catalogue_type.php?type=pantalon">PANTALON</a></div>
+        <div class="categorie categorie_jupe"><a href="../catalogue_type.php?type=top">TOP</a></div>
     </div>
 </section>
-
 
 <section class="contenaire_catalogue">
     <div class="container_items">

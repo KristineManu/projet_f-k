@@ -2,22 +2,30 @@
 session_start();
 require_once("connect.php");
 
-$sql = "SELECT * FROM product WHERE id_tendance ='2'";
-// On prépare la requêtte
+if (!isset($_GET["id_tendance"]) || empty($_GET["id_tendance"])) {
+    header("Location: index.php");
+    exit;
+}
+
+$sql = "SELECT * FROM product WHERE id_tendance = :id_tendance";
+$id_tendance = $_GET["id_tendance"];
 $query = $db->prepare($sql);
 
-// $query->bindValue(":id", $admin, PDO::PARAM_INT);
-// on execute la requêtte
+$query->bindValue("id_tendance", $id_tendance, PDO::PARAM_INT);
+
 $query->execute();
-// on recupère les données sous forme de tableau associatif
+
 $product = $query->fetchAll(PDO::FETCH_ASSOC);
 
-// print_r($users);
-// echo "<pre>";
-// print_r($users);
-// echo "</pre>";
+if (!$product) {
+
+    http_response_code(404);
+    echo "Article inexistant";
+    exit;
+}
 
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
