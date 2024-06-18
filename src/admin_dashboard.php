@@ -54,8 +54,13 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-        <button class="dashboard-btn"><a href="logout.php">Déconnexion</a></button>
-        <br>
+    
+        <button class="dashboard-btn dashboard-btn_1"><a href="logout.php">Déconnexion</a></button>
+       
+        <button class="dashboard-btn dashboard-btn_1"><a href="#">Base clients</a></button>
+        
+
+
         <?php
         if (!empty($_SESSION["message"])) {
             echo "<p>" . $_SESSION["message"] . "</p>";

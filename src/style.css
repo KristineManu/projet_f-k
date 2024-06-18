@@ -445,6 +445,7 @@ background-size: cover;
  border: darksalmon;
  text-align: center;
  align-items: center;
+ border: 1px solid  rgba(204, 135, 113, 0.596);
 }
 .dashboard-btn a{
   text-decoration: none;
@@ -454,6 +455,10 @@ background-size: cover;
 background-color: rgba(204, 135, 113, 0.596);
 
  transition: ease all 0.3s;
+}
+.dashboard-btn_1{
+margin-right: 100px;
+
 }
 
 
@@ -466,7 +471,7 @@ table {
   table-layout: fixed;
   width: 100%;
  border-collapse: separate;
-  border: 3px solid purple;
+  border: 3px solid  rgba(204, 135, 113, 0.596);
 }
 .tb1{
   width: 70%; 
@@ -479,8 +484,8 @@ th {
 td {
   letter-spacing: 1px;
 }
-td,th{
-  border: 1px solid black;
+th,td{
+  border: 0.001px solid rgba(204, 136, 113, 0.253);
 }
 tbody td {
   text-align: center;
