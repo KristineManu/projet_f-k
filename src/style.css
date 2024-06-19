@@ -449,7 +449,7 @@ background-size: cover;
  border: 1px solid  rgba(204, 135, 113, 0.596);
 }
 .dashboard-btn a{
-  text-decoration: none;
+  text-decoration:none;
   color: black;
 }
 .dashboard-btn:hover{
@@ -461,7 +461,9 @@ background-color: rgba(204, 135, 113, 0.596);
 margin-right: 100px;
 
 }
-
+.dashboard-btn_1 a{
+  text-decoration: none;
+}
 
 
 
@@ -673,7 +675,7 @@ input{
 }
 /*form*/
 .conteneur_form_form{
-  height: 80%;
+  height: 90%;
   width: 350px;
   border: #1d1c1c21 solid 1px;
   backdrop-filter: blur(1.2px);
