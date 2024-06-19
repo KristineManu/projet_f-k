@@ -55,7 +55,7 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
     
-        <button class="dashboard-btn dashboard-btn_1"><a href="logout.php">Déconnexion</a></button>
+        <button class="dashboard-btn dashboard-btn_1">Déconnexion</a></button>
        
         <button class="dashboard-btn dashboard-btn_1"><a href="#">Base clients</a></button>
         
@@ -73,9 +73,7 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
                 <th>id</th>
                 <th>tendance_name</th>
                 <th>Modifier</th>
-                <th>
-                    <Select:d></Select:d>Supprimer
-                </th>
+                <th>Supprimer</th>
             </thead>
             <tbody>
 
@@ -103,7 +101,7 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
                 ?>
 
                 <div>
-                    <button class="dashboard-btn"><a href="form_tendance.php">Ajouter une tendance</a></button>
+                    <a href="form_tendance.php"><button class="dashboard-btn">Ajouter une tendance</button></a>
 
                     <br>
                     <br>
