@@ -21,12 +21,12 @@
         <input type="text" name="tendance_name" required>
   
 </div>
-<div class="form-login">
-                            <input class="login-btn"type="submit" value="Ajouter">
-                    </div>
+
+    <button class="login-btn"> Ajouter </button>
+                   
     </form>
-    
-    <button class="login-btn">  <a href="admin_dashboard.php">Retour</a></button>
+    <br>
+    <a href="admin_dashboard.php"><button class="login-btn">Retour</button></a>
 </div>
 </div>
 </body>

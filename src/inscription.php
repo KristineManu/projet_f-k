@@ -80,15 +80,19 @@ if ($_POST) {
 </head>
 
 <body>
+<?php
+  include './element/navbar.php';
+  ?>
 
-
-    <div class="form">
+<div class="conteneur_login">
+<div class="conteneur_form_form">
         <h1>Créer un compte: </h1>
-
+<br>
         <p>Vous avez déjà un compte ?</p>
-        <button class="bouton"> <a href="login.php">Se connecter</a></button>
-
-        <button class="bouton"><a href="index.php" class="back_btn"><img src="images/back.png"> Retour</a></button>
+        <br>
+        <button class="login-btn"> <a href="login.php">Se connecter</a></button>
+<br>
+        <button class="login-btn"><a href="index.php" class="back_btn"> Retour</a></button>
         <form method="post">
             <label for="first_name">Prénom:</label><br>
             <input type="text" id="first_name" name="first_name" required><br>
@@ -100,10 +104,11 @@ if ($_POST) {
             <input type="password" id="password" name="password" required><br>
             <label for="password_confirm">Confirmez le mot de passe:</label><br>
             <input type="password" id="password_confirm" name="password_confirm" required><br>
-            <button type="submit" class="Btn_add"> <img src="images/plus.png">Enregistrer</button>
+            <button class="login-btn" type="submit" class="Btn_add">Enregistrer</button>
+            <br>
         </form>
 
-
+</div>
     </div>
 </body>
 
