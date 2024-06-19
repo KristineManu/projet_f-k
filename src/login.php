@@ -55,25 +55,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['email']) && !empty($_
     <title>F&K_Login</title>
 </head>
 <body>
-    
-
-<h1>Conecter vous: </h1>
-<!-- Formulaire de connexion -->
-<div class=maincontent>
-    <div class="content">
-        <div class="log1">
-            <p>Pas de compte?</p><a class=boutonsignupx href="inscription.php">S'inscrire</a>
-        </div>
-        <div class="log2">
-            <form method="post" action="login.php">
-                <br>
-                e-mail: <br><input type="text" name="email" required><br>
-                Mot de passe: <br><input type="password" name="password" required><br><br>
-                <input type="submit" value="Se connecter">
-            </form>
-        </div>
-        <br>
-        <a href="index.php">Retour</a>
+<?php
+  include './element/navbar.php';
+  ?>
+    <div class="conteneur_login">
+        <div class="conteneur_form">
+           
+            <!-- Formulaire de connexion -->
+                <h1>Connectez-vous: </h1>
+                <p>Pas de compte?</p><button class="login-btn"><a href="inscription.php">S'inscrire</a></button>
+                <form method="post" action="login.php">
+                    <div class="form-login">
+                        <label for="e-mail"> E-mail: </label>
+                        <input type="text" name="email" required>
+                    </div>
+                    <div class="form-login">
+                            <label for="password">Mot de passe: </label>
+                             <input type="password" name="password" required>
+                    </div>
+                    <div class="form-login">
+                            <input class="login-btn"type="submit" value="Se connecter">
+                    </div>
+                </form>
+                 <button class="login-btn"><a  href="index.php">Retour</a></button>
+           
+        
+                
+        </div>     
     </div>
+
 </div>
+
+
+    
+<script src="script.js"></script>
 </body>

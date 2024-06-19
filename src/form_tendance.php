@@ -9,20 +9,26 @@
 </head>
 
 <body>
-    <h1>AJOUTER UNE TENDANCE: </h1>
+<?php
+  include './element/navbar.php';
+  ?>
+   <div class="conteneur_login">
+<div class="conteneur_form">
+    <h2>AJOUTER UNE TENDANCE: </h2>
     <form action="create_tendance.php" method="post">
+    <div class="form-login">
         <label for="tendance_name">Nom de la tendance:</label>
-        <br>
         <input type="text" name="tendance_name" required>
-        <br>
-        <br>
-        <button>Ajouter</button>
+  
+</div>
+<div class="form-login">
+                            <input class="login-btn"type="submit" value="Ajouter">
+                    </div>
     </form>
-    <br>
-    <a href="admin_dashboard.php">Retour</a>
-    <?php
-    // print_r($_POST);
-    ?>
+    
+    <button class="login-btn">  <a href="admin_dashboard.php">Retour</a></button>
+</div>
+</div>
 </body>
 
 </html>
