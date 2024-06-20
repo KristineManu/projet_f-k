@@ -57,7 +57,7 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
 
         <button class="dashboard-btn dashboard-btn_1">Déconnexion</a></button>
 
-        <button class="dashboard-btn dashboard-btn_1"><a href="#">Base clients</a></button>
+        <button class="dashboard-btn dashboard-btn_1"><a href="base_client.php">Base clients</a></button>
 
 
 
@@ -73,7 +73,6 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
                 <th>id</th>
                 <th>tendance_name</th>
                 <th>Modifier</th>
-                <th>Supprimer</th>
             </thead>
             <tbody>
 
@@ -89,11 +88,6 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
                         <td>
                             <a href="update_tendance.php?id=<?= $tend["id"] ?>"><img src="img/icon/pen.png" height="25px" alt="modifier"></a>
                         </td>
-                        <td>
-                            <a href="delete.php?id=<?= $tend["id"] ?>"><img src="img/icon/trash.png" height="25px" alt="Supprimer"></a>
-
-                        </td>
-
                     </tr>
                 <?php
                 }
