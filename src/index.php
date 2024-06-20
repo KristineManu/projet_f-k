@@ -48,17 +48,36 @@
         </a>
       </div>
     </div>
-    </section>
+  </section>
 
-    <section>
-      <div class="contenaire_tendance">
-        <div class="contenaire_photo">
-          <a href="../catalogue_type.php?type=robe"><img src="../img/index_robe.jpg" height="688px" width="520px" alt=""></a>
-          <a href="../catalogue_type.php?type=top"><img src="../img/index_top.jpg" height="688px" width="520px" alt=""></a>
-          <a href="../catalogue_type.php?type=pantalon"><img src="../img/index_pantalon.jpg" height="688px" width="520px" alt=""></a>
-        </div>
-      </div>
-    </section>
+  <section2 class="type">
+    <figure class="effect">
+        <img src="img/2311208.jpg" height="688px" width="520px" alt="">
+        <figcaption>
+            <h2> <span>ROBE</span>  </h2>
+            <p>ELEGANCE</p>
+            <a  href="../catalogue_type.php?type=robe"><button class="btn_effect">Découvrez</button></a>
+        </figcaption>	
+    </figure>
+  
+  <figure class="effect">
+        <img src="img/index_top.jpg" height="688px" width="520px" alt="">
+        <figcaption>
+            <h2><span>TOP</span>  </h2>
+            <p>CHIC</p>
+            <a  href="../catalogue_type.php?type=top"><button class="btn_effect">Découvrez</button></a>
+        </figcaption>	
+    </figure>
+    <figure class="effect">
+        <img src="img/index_pantalon.jpg" height="688px" width="520px" alt="">
+        <figcaption>
+            <h2><span>PANTALON</span>  </h2>
+            <p>STYLE</p>
+            <a  href="../catalogue_type.php?type=pantalon"><button class="btn_effect">Découvrez</button></a>
+        </figcaption>	
+    </figure>
+  
+  </section>
 
     <?php
     include './element/footer.php';

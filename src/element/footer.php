@@ -1,6 +1,6 @@
 <footer >
 <article class="product_info">
-           <h2>Restez informé(e) des nouveautés</h2>
+           <h3>Restez informé(e) des nouveautés</h3>
                 <div class="reseau_sociaux">
                     <img src="img/icon/icons8-f.svg" alt="">
                     <img src="img/icon/icons8-twitterx (2).svg"  alt="">
@@ -10,7 +10,7 @@
 <div class="contenaire-footer">
         <div class="footer_left">
             <div class="footer-title">
-                <h2>Paiement en ligne</h2>
+                <h3>Paiement en ligne</h3>
                 <p>Livraison directement à domicile</p>
             </div>
             <div class="footer-elements">
@@ -37,7 +37,7 @@
 
         <div class="footer_right">
             <div class="footer-title">
-                <h2>E-réservation</h2>
+                <h3>E-réservation</h3>
                 <p>Payez quand vous l'avez !</p>
             </div>
             <div class="footer-elements">
