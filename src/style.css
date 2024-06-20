@@ -218,10 +218,15 @@ body {
   }
 }
 
+
+/*Tendance php*/
+
 .contenaire {
   margin: 70px auto;
   max-width: 1375px;
   max-height: 665px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contenaire_tendance {
@@ -229,20 +234,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .contenaire_photo {
-  gap: 30px;
-  display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
-/*les carte dans le caralogue*/
+/*les carte dans le catalogue*/
 
 .contenaire_catalogue {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

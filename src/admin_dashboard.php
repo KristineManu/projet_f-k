@@ -57,7 +57,7 @@ $tendance = $query->fetchAll(PDO::FETCH_ASSOC);
 
         <button class="dashboard-btn dashboard-btn_1">Déconnexion</a></button>
 
-        <button class="dashboard-btn dashboard-btn_1"><a href="base_client.php">Base clients</a></button>
+        <button class="dashboard-btn dashboard-btn_1"><a href="#">Base clients</a></button>
 
 
 
