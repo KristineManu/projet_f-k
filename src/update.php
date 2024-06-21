@@ -74,6 +74,11 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 </head>
 
 <body>
+<?php
+  include './element/navbar.php';
+  ?>
+    <div class="conteneur_login">
+    <div class="conteneur_form_form">
     <h1>Modifier <?= $user["product_name"] ?>:</h1>
     <form method="post">
         <select name="type" id="type">
@@ -82,9 +87,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
             <option>pantalon</option>
             <option>top</option>
         </select>
-        <br>
         <label for="id_tendance">Tendance:</label>
-        <br>
         <select name="id_tendance" required>
             <option value="">Sélectionnez une tendance</option>
             <?php
@@ -97,38 +100,26 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
             }
             ?>
         </select>
-        <br>
+        
         <label for="product_name">Nom du produit:</label>
-        <br>
         <input type="text" name="product_name" value="<?= $user["product_name"] ?>" required>
-        <br>
         <label for="product_description">description du produit:</label>
-        <br>
         <input type="text" name="product_description" value="<?= $user["product_description"] ?>" required>
-        <br>
         <label for="product_price">Prix:</label>
-        <br>
         <input type="text" name="product_price" value="<?= $user["product_price"] ?>" required>
-        <br>
         <label for="product_pic_1">photo:</label>
-        <br>
         <input type="text" name="product_pic_1" value="<?= $user["product_pic_1"] ?>" required>
-        <br>
         <label for="product_pic_2">photo:</label>
-        <br>
         <input type="text" name="product_pic_2" value="<?= $user["product_pic_2"] ?>" required>
-        <br>
-        <br>
         <input type="hidden" name="id" value="<?= $user["id"] ?>" required>
-        <br>
-        <br>
-        <button>Modifier</button>
+        
+        
     </form>
+    <button class="login-btn" type="submit" class="Btn_add">Modifier</button>   
     <br>
-    <a href="admin_dashboard.php">Retour</a>
-    <?php
-    // print_r($_POST);
-    ?>
+    <a href="admin_dashboard.php"><button class="login-btn" type="submit" class="Btn_add">Retour </button></a>
+        </div>
+        </div>
 </body>
 
 </html>
