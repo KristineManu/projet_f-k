@@ -28,32 +28,31 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <section class="admin_dashboard">
+<section class="admin_dashboard">
         <?php
         include './element/navbar.php';
         ?>
-
-        <h1 class="article_dashboard">Base client</h1>
-
-
+    
+            <h1 class="article_dashboard">Base client</h1>
 
 
 
-        <button class="dashboard-btn dashboard-btn_1"><a href="logout.php">Déconnexion</a></button>
 
-        <button class="dashboard-btn dashboard-btn_1"><a href="admin_dashboard.php">Dashboard</a></button>
 
-        <table class="tb1">
-            <thead>
-                <th>id</th>
-                <th>first_name</th>
-                <th>last_name</th>
-                <th>email</th>
-                <th>
-                    <Select:d></Select:d>Supprimer
-                </th>
-            </thead>
-            <tbody>
+            <button class="dashboard-btn dashboard-btn_1"><a href="logout.php">Déconnexion</a></button>
+
+            <button class="dashboard-btn dashboard-btn_1"><a href="admin_dashboard.php">Dashboard</a></button>
+
+            <table class="tb3">
+                <thead>
+                    <th>id</th>
+                    <th>first_name</th>
+                    <th>last_name</th>
+                    <th>email</th>
+                    <th> Supprimer  </th>
+                      
+                </thead>
+                <tbody>
 
                 <?php
                 // pour chaque utilisateur recupéré dans $users on affiche une nouvelle ligne dans la table html
@@ -79,7 +78,6 @@ $users = $query->fetchAll(PDO::FETCH_ASSOC);
 
                     <br>
                     <br>
-
                 </div>
             </tbody>
         </table>

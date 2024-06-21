@@ -31,6 +31,8 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 </head>
 
 <body>
+<section>
+    <div class="admin_dashboard">
     <h1>Le Produit : <?= $user["product_name"] ?></h1>
     <p><?= "- id_tendance : " .  $user["id_tendance"]
             . "<br><br>"
@@ -49,6 +51,8 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 
         ?></p>
     <a href="admin_dashboard.php">Retour</a>
+    </div>
+</section>
 </body>
 
 </html>

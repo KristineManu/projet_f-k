@@ -578,6 +578,7 @@ body {
       hsl(8deg 56% 88%) 90%,
       hsl(15deg 51% 85%) 100%);
   background-size: cover;
+  height: 100%;
 
 }
 
@@ -703,7 +704,11 @@ tfoot th {
   width: 150px;
 }
 
+.tb3{
 
+background-size: ;
+  width: 70%;
+}
 
 
 /*Inscription*/
