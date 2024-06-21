@@ -19,7 +19,7 @@
   include './element/navbar.php';
   ?>
 
-  <section>
+  <section >
     <div class="contenaire">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
