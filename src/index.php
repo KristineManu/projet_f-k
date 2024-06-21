@@ -48,45 +48,45 @@
         </a>
       </div>
     </div>
-  </section>
+    </section>
 
-  <section2 class="type">
-    <figure class="effect">
+    <section2 class="type">
+      <figure class="effect">
         <img src="img/2311208.jpg" height="688px" width="520px" alt="">
         <figcaption>
-            <h2> <span>ROBE</span>  </h2>
-            <p>ELEGANCE</p>
-            <a  href="../catalogue_type.php?type=robe"><button class="btn_effect">Découvrez</button></a>
-        </figcaption>	
-    </figure>
-  
-  <figure class="effect">
+          <h2> <span>ROBE</span> </h2>
+          <p>ELEGANCE</p>
+          <a href="../catalogue_type.php?type=robe"><button class="btn_effect">Découvrez</button></a>
+        </figcaption>
+      </figure>
+
+      <figure class="effect">
         <img src="img/index_top.jpg" height="688px" width="520px" alt="">
         <figcaption>
-            <h2><span>TOP</span>  </h2>
-            <p>CHIC</p>
-            <a  href="../catalogue_type.php?type=top"><button class="btn_effect">Découvrez</button></a>
-        </figcaption>	
-    </figure>
-    <figure class="effect">
+          <h2><span>TOP</span> </h2>
+          <p>STYLE</p>
+          <a href="../catalogue_type.php?type=top"><button class="btn_effect">Découvrez</button></a>
+        </figcaption>
+      </figure>
+      <figure class="effect">
         <img src="img/index_pantalon.jpg" height="688px" width="520px" alt="">
         <figcaption>
-            <h2><span>PANTALON</span>  </h2>
-            <p>STYLE</p>
-            <a  href="../catalogue_type.php?type=pantalon"><button class="btn_effect">Découvrez</button></a>
-        </figcaption>	
-    </figure>
-  
-  </section>
+          <h2><span>PANTALON</span> </h2>
+          <p>CHIC</p>
+          <a href="../catalogue_type.php?type=pantalon"><button class="btn_effect">Découvrez</button></a>
+        </figcaption>
+      </figure>
 
-    <?php
-    include './element/footer.php';
-    ?>
+      </section>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <?php
+      include './element/footer.php';
+      ?>
+
+      <!-- Bootstrap JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
 
