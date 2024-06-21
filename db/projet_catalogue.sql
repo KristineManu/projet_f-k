@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le : lun. 17 juin 2024 à 14:27
+-- Généré le : ven. 21 juin 2024 à 09:33
 -- Version du serveur : 8.0.37
 -- Version de PHP : 8.2.8
 
@@ -44,7 +44,6 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`id`, `id_tendance`, `type`, `product_name`, `product_description`, `product_price`, `product_pic_1`, `product_pic_2`) VALUES
 (16, 2, 'robe', 'Robe Lin Volants Dos Noué', 'Colorée et agréable à porter, cette robe pour femme en lin ornée de volants et au dos noué nous fait toutes craquer ! On adore son tissu léger mêlant lin et viscose, ses manches à volants, son encolure V, sa basque ainsi que son dos noué. Il ne vous reste plus qu\'à profiter des journées les plus ensoleillées de l\'année ! Existe en ocre et verdure. Longueur totale pour une taille 38 : 96 cm environ. Notre mannequin mesure 1m74 et porte une taille 38.', '20,99 €', '../img/product/jungle_paradise_1a.jpg', '../img/product/jungle_paradise_1b.jpg'),
-(17, 2, 'top', 'Tee-Shirt Fantaisie ', 'Délicat et féminin, ce tee-shirt pour femme à l\'inscription \"Love Fashion\" s\'imposera vite comme une des pièces phares de votre vestiaire. Léger et confortable, ce tee-shirt puise son originalité dans son illustration fleurie sublimée par des notes brillantes. De quoi relever d\'une touche de fantaisie un joli pantalon uni... Existe en noir et blanc. Longueur totale pour une taille 1 : 63,5 cm environ. Notre mannequin mesure 1,79m et porte une taille 1.', '12,99 €', '../img/product/jungle_paradise_2a.jpg', '../img/product/jungle_paradise_2b.jpg'),
 (18, 2, 'top', 'Top Imprimé Fleuri Col Tunisien', 'Ajoutez de la douceur à vos tenues estivales avec ce top pour femme à l\'imprimé fleuri et au col tunisien boutonné. Vous apprécierez son tissu léger et fluide en viscose qui vous offre un confort inégalé pour les plus belles journées d\'été. Tant avec un pantalon qu\'un bermuda uni, ce top vous garantit un look efficace pour profiter de l\'été. Existe en jaune et kaki. Longueur totale pour une taille 38 : 66 cm environ. Notre mannequin mesure 1m79 et porte une taille 38.', '11,99 €', '../img/product/jungle_paradise_3a.jpg', '../img/product/jungle_paradise_3b.jpg'),
 (19, 2, 'top', 'Débardeur Fantaisie Jungle Strass', 'Donnez du peps à vos tenues de plein été avec ce débardeur fantaisie pour femme dotée d\'une sérigraphie au thème jungle orné de strass. On craque pour ses coulisses aux épaules, son tissu flammé doux et confortable ainsi que son décor de feuilles aux touches brillantes qui nous invite au voyage. Existe en jaune et beige. Longueur totale pour une taille 1 : 65 cm environ. Notre mannequin mesure 1,75m et porte une taille 1.', '19,99 €', '../img/product/jungle_paradise_4a.jpg', '../img/product/jungle_paradise_4b.jpg'),
 (20, 2, 'top', 'Tee-Shirt Boutons Fantaisie', 'Un classique réhaussé d\'une touche de fantaisie : on adore ! Facile à assortir, ce tee-shirt uni pour femme nous séduit par ses emmanchures descendues ornées de boutons fantaisie. Un indispensable qui sera parfait avec un joli pantalon imprimé ! Existe en écru et noir. Longueur totale pour une taille 1 : 58 cm environ. Notre mannequin mesure 1m74 et porte une taille 1.', '10,99 €', '../img/product/jungle_paradise_5a.jpg', '../img/product/jungle_paradise_5b.jpg'),
@@ -60,7 +59,8 @@ INSERT INTO `product` (`id`, `id_tendance`, `type`, `product_name`, `product_des
 (30, 1, 'robe', 'Robe Imprimé Zèbre Détail Coulisse', 'Optez pour une pièce au style original avec cette robe pour femme à l\'imprimé zèbre et au détail de coulisse sur les manches. Le plus : son encolure en V ornée d\'un galon avec des franges et du fil lurex pour encore plus de fantaisie ! Existe en kaki et noir. Longueur totale pour une taille 38 : 93 cm environ. Notre mannequin mesure 1m74 et porte une taille 38.', '24,99 €', '../img/product/echapee_sauvage_3a.jpg', '../img/product/echapee_sauvage_3b.jpg'),
 (31, 1, 'top', 'Chemise Tie-Dye Broderie Perles', 'Laissez-vous séduire par cette chemise pour femme au style tie-dye avec broderies et perles. Fluide et agréable, elle est également pratique grâce à ses manches longues retroussables au gré de vos envies. Une encolure style col tunisien avec boutons complète le look de cette chemise originale qui fera des merveilles avec un pantalon uni assorti. Existe en bleu et vert. Longueur totale pour une taille 38 : 70 cm environ. Notre mannequin mesure 1,79m et porte une taille 38.', '19,99 €', '../img/product/echapee_sauvage_4a.jpg', '../img/product/echapee_sauvage_4b.jpg'),
 (32, 1, 'pantalon', 'Pantalon Bengaline Clous Fantaisie', 'Sobre avec une petite touche d\'originalité, ce pantalon bengaline pour femme avec clous fantaisie a tout pour lui ! Très confortable grâce à sa matière extensible, on aime ses passants à la ceinture, sa fermeture zippée avec bouton et ses deux vraies poches à l\'avant qui lui donnent le look d\'un vrai jean. Le plus : ses clous fantaisie qui ornent les poches avant pour une touche de brillance ! Existe en solitaire et jungle. Longueur totale pour une taille 38 : 103 cm environ. Notre mannequin mesure 1,79m et porte une taille 38.', '17,99 €', '../img/product/echapee_sauvage_5a.jpg', '../img/product/echapee_sauvage_5b.jpg'),
-(33, 1, 'robe', 'Robe Droite Imprimé Ethnique', 'Élégante et originale, cette robe droite pour femme à l\'imprimé ethnique est idéale pour rester stylée tout l\'été. On aime sa matière fluide et légère, son intérieur doublé, sa coupe droite intemporelle ainsi que son motif bicolore qui donne du pep\'s à notre look ! Existe en kaki et vert. Longueur totale pour une taille 38 : 93 cm environ. Notre mannequin mesure 1m74 et porte une taille 38.', '20,99 €', '../img/product/echapee_sauvage_6a.jpg', '../img/product/echapee_sauvage_6b.jpg');
+(33, 1, 'robe', 'Robe Droite Imprimé Ethnique', 'Élégante et originale, cette robe droite pour femme à l\'imprimé ethnique est idéale pour rester stylée tout l\'été. On aime sa matière fluide et légère, son intérieur doublé, sa coupe droite intemporelle ainsi que son motif bicolore qui donne du pep\'s à notre look ! Existe en kaki et vert. Longueur totale pour une taille 38 : 93 cm environ. Notre mannequin mesure 1m74 et porte une taille 38.', '20,99 €', '../img/product/echapee_sauvage_6a.jpg', '../img/product/echapee_sauvage_6b.jpg'),
+(38, 2, 'top', 'Tee-Shirt Fantaisie \"Love Fashion\"', 'Délicat et féminin, ce tee-shirt pour femme à l\'inscription \"Love Fashion\" s\'imposera vite comme une des pièces phares de votre vestiaire. Léger et confortable, ce tee-shirt puise son originalité dans son illustration fleurie sublimée par des notes brillantes. De quoi relever d\'une touche de fantaisie un joli pantalon uni... Existe en noir et blanc. Longueur totale pour une taille 1 : 63,5 cm environ. Notre mannequin mesure 1,79m et porte une taille 1.', '10,99 €', '../img/product/jungle_paradise_2a.jpg', '../img/product/jungle_paradise_2b.jpg');
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,8 @@ CREATE TABLE `tendance` (
 INSERT INTO `tendance` (`id`, `tendance_name`) VALUES
 (1, 'echapee_sauvage'),
 (2, 'jungle_paradise'),
-(3, 'terres_devasion');
+(3, 'terres_devasion'),
+(14, 'none');
 
 -- --------------------------------------------------------
 
@@ -136,13 +137,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT pour la table `tendance`
 --
 ALTER TABLE `tendance`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `users`
