@@ -32,24 +32,24 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 
 <body>
 <section>
-    <div class="admin_dashboard">
+    <div class="admin_user">
     <h1>Le Produit : <?= $user["product_name"] ?></h1>
-    <p><?= "- id_tendance : " .  $user["id_tendance"]
+    <div class="user"><?= " id_tendance : " .  $user["id_tendance"]
             . "<br><br>"
-            . "- type : " . $user["type"]
+            . "type : " . $user["type"]
             . "<br><br>"
-            . "- product_name : " . $user["product_name"]
+            . " product_name : " . $user["product_name"]
             . "<br><br>"
-            . "- product_description : " . $user["product_description"]
+            . " product_description : " . $user["product_description"]
             . "<br><br>"
-            . "- product_price : " . $user["product_price"]
+            . " product_price : " . $user["product_price"]
             . "<br><br>"
-            . "- product_pic_1 : " . "<img src=" .  $user["product_pic_1"] . " width='450px' height='600px' alt=''>"
-            . "- product_pic_2 : " . "<img src=" . $user["product_pic_2"] . " width='450px' height='600px' alt=''>"
+            . "  " . "<img src=" .  $user["product_pic_1"] . " width='225px' height='300px' alt=''>"
+            . "   " . "<img src=" . $user["product_pic_2"] . " width='225px' height='300px' alt=''>"
             . "<br><br>"
 
-        ?></p>
-    <a href="admin_dashboard.php">Retour</a>
+        ?></div>
+    <a  class="dashboard-btn" href="admin_dashboard.php">Retour</a>
     </div>
 </section>
 </body>
