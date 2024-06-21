@@ -33,6 +33,19 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
         $query->execute();
     }
 
+    $sql = "SELECT * FROM users WHERE id = :id";
+    $query = $db->prepare($sql);
+    $query->bindValue(":id", $id, PDO::PARAM_INT);
+    $query->execute();
+    $users = $query->fetch();
+
+    if ($product) {
+        $sql = "DELETE FROM users WHERE id = :id";
+        $query = $db->prepare($sql);
+        $query->bindValue(":id", $id, PDO::PARAM_INT);
+        $query->execute();
+    }
+
     header("Location: admin_dashboard.php");
 } else {
     header("Location: index.php");
