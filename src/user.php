@@ -31,6 +31,11 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
 </head>
 
 <body>
+
+    <?php
+    include './element/navbar.php';
+    ?>
+
     <h1>Le Produit : <?= $user["product_name"] ?></h1>
     <p><?= "- id_tendance : " .  $user["id_tendance"]
             . "<br><br>"
@@ -42,9 +47,8 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
             . "<br><br>"
             . "- product_price : " . $user["product_price"]
             . "<br><br>"
-            . "- product_pic_1 : " . $user["product_pic_1"]
-            . "<br><br>"
-            . "- product_pic_2 : " . $user["product_pic_2"]
+            . "- product_pic_1 : " . "<img src=" .  $user["product_pic_1"] . " width='450px' height='600px' alt=''>"
+            . "- product_pic_2 : " . "<img src=" . $user["product_pic_2"] . " width='450px' height='600px' alt=''>"
             . "<br><br>"
 
         ?></p>
