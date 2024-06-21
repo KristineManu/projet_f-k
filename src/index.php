@@ -19,7 +19,7 @@
   include './element/navbar.php';
   ?>
 
-  <section >
+  <section>
     <div class="contenaire">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -48,45 +48,45 @@
         </a>
       </div>
     </div>
-    </section>
+  </section>
 
-    <section class="type">
-      <figure class="effect">
-        <img src="img/2311208.jpg" height="688px" width="520px" alt="">
-        <figcaption>
-          <div class="RTP"> <span>ROBE</span> </div>
-          <p>ELEGANCE</p>
-          <a href="../catalogue_type.php?type=robe"><button class="btn_effect">Découvrez</button></a>
-        </figcaption>
-      </figure>
+  <section class="type">
+    <figure class="effect">
+      <img src="img/2311208.jpg" height="688px" width="520px" alt="">
+      <figcaption>
+        <div class="RTP"> <span>ROBE</span> </div>
+        <p>ELEGANCE</p>
+        <a href="../catalogue_type.php?type=robe"><button class="btn_effect">Découvrez</button></a>
+      </figcaption>
+    </figure>
 
-      <figure class="effect">
-        <img src="img/index_top.jpg" height="688px" width="520px" alt="">
-        <figcaption>
-          <div class="RTP" ><span>TOP</span> </div>
-          <p>STYLE</p>
-          <a href="../catalogue_type.php?type=top"><button class="btn_effect">Découvrez</button></a>
-        </figcaption>
-      </figure>
-      <figure class="effect">
-        <img src="img/index_pantalon.jpg" height="688px" width="520px" alt="">
-        <figcaption>
-          <div class="RTP"><span>PANTALON</span> </div>
-          <p>CHIC</p>
-          <a href="../catalogue_type.php?type=pantalon"><button class="btn_effect">Découvrez</button></a>
-        </figcaption>
-      </figure>
+    <figure class="effect">
+      <img src="img/index_top.jpg" height="688px" width="520px" alt="">
+      <figcaption>
+        <div class="RTP"><span>TOP</span> </div>
+        <p>STYLE</p>
+        <a href="../catalogue_type.php?type=top"><button class="btn_effect">Découvrez</button></a>
+      </figcaption>
+    </figure>
+    <figure class="effect">
+      <img src="img/index_pantalon.jpg" height="688px" width="520px" alt="">
+      <figcaption>
+        <div class="RTP"><span>PANTALON</span> </div>
+        <p>CHIC</p>
+        <a href="../catalogue_type.php?type=pantalon"><button class="btn_effect">Découvrez</button></a>
+      </figcaption>
+    </figure>
 
-      </section>
+  </section>
 
-      <?php
-      include './element/footer.php';
-      ?>
+  <?php
+  include './element/footer.php';
+  ?>
 
-      <!-- Bootstrap JS, Popper.js, and jQuery -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
 
