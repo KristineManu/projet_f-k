@@ -92,7 +92,7 @@ if ($_POST) {
         <br>
         <button class="login-btn"> <a href="login.php">Se connecter</a></button>
 <br>
-        <button class="login-btn"><a href="index.php" class="back_btn"> Retour</a></button>
+        
         <form method="post">
             <label for="first_name">Prénom:</label><br>
             <input type="text" id="first_name" name="first_name" required><br>
@@ -107,7 +107,8 @@ if ($_POST) {
             <button class="login-btn" type="submit" class="Btn_add">Enregistrer</button>
             <br>
         </form>
-
+        <br>
+        <button class="login-btn"><a href="index.php" class="back_btn"> Retour</a></button>
 </div>
     </div>
 </body>
