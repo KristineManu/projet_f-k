@@ -235,7 +235,7 @@ body {
 }
 
 .effect p,
-h2 {
+.RTP {
   color: #ffff;
   font-size: 60px;
   text-align: center;
@@ -270,7 +270,7 @@ h2 {
   content: '';
 }
 
-.effect h2 {
+.effect .RTP {
   margin: 35% 0 70px 0;
   transition: transform 0.35s;
   transition: transform 0.35s;
@@ -292,7 +292,7 @@ h2 {
   transform: scale(0);
 }
 
-.effect:hover h2 {
+.effect:hover .RTP {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -324,7 +324,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 10px;
 }
 
 

@@ -19,7 +19,7 @@
   include './element/navbar.php';
   ?>
 
-  <section1>
+  <section>
     <div class="contenaire">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -50,11 +50,11 @@
     </div>
     </section>
 
-    <section2 class="type">
+    <section class="type">
       <figure class="effect">
         <img src="img/2311208.jpg" height="688px" width="520px" alt="">
         <figcaption>
-          <h2> <span>ROBE</span> </h2>
+          <div class="RTP"> <span>ROBE</span> </div>
           <p>ELEGANCE</p>
           <a href="../catalogue_type.php?type=robe"><button class="btn_effect">Découvrez</button></a>
         </figcaption>
@@ -63,7 +63,7 @@
       <figure class="effect">
         <img src="img/index_top.jpg" height="688px" width="520px" alt="">
         <figcaption>
-          <h2><span>TOP</span> </h2>
+          <div class="RTP" ><span>TOP</span> </div>
           <p>STYLE</p>
           <a href="../catalogue_type.php?type=top"><button class="btn_effect">Découvrez</button></a>
         </figcaption>
@@ -71,7 +71,7 @@
       <figure class="effect">
         <img src="img/index_pantalon.jpg" height="688px" width="520px" alt="">
         <figcaption>
-          <h2><span>PANTALON</span> </h2>
+          <div class="RTP"><span>PANTALON</span> </div>
           <p>CHIC</p>
           <a href="../catalogue_type.php?type=pantalon"><button class="btn_effect">Découvrez</button></a>
         </figcaption>

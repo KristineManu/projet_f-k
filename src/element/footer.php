@@ -1,16 +1,16 @@
 <footer >
-<article class="product_info">
-           <h3>Restez informé(e) des nouveautés</h3>
-                <div class="reseau_sociaux">
-                    <img src="img/icon/icons8-f.svg" alt="">
-                    <img src="img/icon/icons8-twitterx (2).svg"  alt="">
-                    <img src="img/icon/icons8-instagram (1).svg" alt="">
-                </div>
-                </article>
-<div class="contenaire-footer">
+ <article class="product_info">
+            <h2>Restez informé(e) des nouveautés</h2>
+        <div class="reseau_sociaux">
+            <img src="img/icon/icons8-f.svg" alt="">
+            <img src="img/icon/icons8-twitterx (2).svg"  alt="">
+            <img src="img/icon/icons8-instagram (1).svg" alt="">
+        </div>
+ </article>
+ <div class="contenaire-footer">
         <div class="footer_left">
             <div class="footer-title">
-                <h3>Paiement en ligne</h3>
+                <h2>Paiement en ligne</h2>
                 <p>Livraison directement à domicile</p>
             </div>
             <div class="footer-elements">
@@ -37,7 +37,7 @@
 
         <div class="footer_right">
             <div class="footer-title">
-                <h3>E-réservation</h3>
+                <h2>E-réservation</h2>
                 <p>Payez quand vous l'avez !</p>
             </div>
             <div class="footer-elements">
@@ -60,7 +60,7 @@
                         <div class="img"><img src="img/icon/retirez-et-payez-en-magasin.svg" height="100px" width="100px" alt=""></div>
                         <p>Retirez et payez <br>vos articles en magasin</p>
                 </div>
-                </div>
+                
             </div>
         </div>
     </div>
